@@ -1,5 +1,6 @@
 import { defineConfig } from "tsup";
 import { solidPlugin } from "esbuild-plugin-solid";
+import { readFileSync } from "fs";
 
 export default defineConfig((config) => [
   {
@@ -22,6 +23,9 @@ export default defineConfig((config) => [
     outExtension: () => ({
       js: ".jsx",
     }),
+    env: {
+      VERSION: JSON.parse(readFileSync("package.json", "utf-8")).version,
+    },
   },
   {
     entry: [

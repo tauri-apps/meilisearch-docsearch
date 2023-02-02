@@ -1,1 +1,2 @@
-export default "0.0.0";
+// @ts-ignore
+export default process.env.VERSION;
