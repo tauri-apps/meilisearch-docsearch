@@ -4,9 +4,9 @@ A quick search component for meilisearch, inspired by algolia/docsearch.
 
 # Screenshots
 
-| light                                    | dark                                   |
-| ---------------------------------------- | -------------------------------------- |
-| ![light](./.github/screenshot-light.png) | ![dark](./.github/screenshot-dark.png) |
+| light                                                                                              | dark                                                                                             |
+| -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
+| ![light](https://github.com/tauri-apps/meilisearch-docsearch/raw/dev/.github/screenshot-light.png) | ![dark](https://github.com/tauri-apps/meilisearch-docsearch/raw/dev/.github/screenshot-dark.png) |
 
 
 # Usage
