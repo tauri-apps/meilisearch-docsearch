@@ -1,0 +1,35 @@
+{
+  "name": "meilisearch-docsearch",
+  "version": "0.0.0",
+  "description": "Algloia-inspired quick search component for meilisearch.",
+  "license": "MIT or Apache-2.0",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "prepublishOnly": "pnpm run build",
+    "build": "tsup",
+    "watch": "tsup --watch",
+    "ts:check": "tsc --noEmit",
+    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,json,html,css}\" --ignore-path .gitignore",
+    "format:check": "prettier --check \"./**/*.{js,jsx,ts,tsx,json,html,css}\" --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "meilisearch": "^0.30.0",
+    "solid-js": "^1.6.9",
+    "typescript": "^4.9.4"
+  },
+  "devDependencies": {
+    "prettier": "^2.8.3",
+    "tsup": "^6.5.0",
+    "tsup-preset-solid": "^0.1.5"
+  },
+  "keywords": [
+    "meilisearch",
+    "search",
+    "docsearch"
+  ]
+}
