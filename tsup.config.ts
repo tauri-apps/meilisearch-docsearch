@@ -4,17 +4,17 @@ import { solidPlugin } from "esbuild-plugin-solid";
 export default defineConfig((config) => [
   {
     entry: ["src/index.tsx"],
-    clean: true,
     format: "esm",
     dts: true,
+    clean: !config.watch,
     minify: !config.watch,
     esbuildPlugins: [solidPlugin()],
   },
   {
     entry: ["src/index.solid.tsx"],
-    clean: true,
     format: "esm",
     dts: true,
+    clean: !config.watch,
     minify: !config.watch,
     esbuildOptions: () => ({
       jsx: "preserve",
@@ -30,7 +30,7 @@ export default defineConfig((config) => [
       "src/styles/button.css",
       "src/styles/modal.css",
     ],
-    clean: true,
+    clean: !config.watch,
     minify: !config.watch,
   },
 ]);
