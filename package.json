@@ -4,7 +4,8 @@
   "description": "A quick search component for meilisearch, inspired by algolia/docsearch.",
   "license": "MIT or Apache-2.0",
   "files": [
-    "dist"
+    "dist",
+    "LICENSE_*"
   ],
   "type": "module",
   "main": "./dist/index.js",
@@ -36,10 +37,12 @@
     "solid-js": "^1.6.9"
   },
   "devDependencies": {
+    "covector": "^0.8.0",
+    "esbuild": "^0.17.5",
     "esbuild-plugin-solid": "^0.5.0",
-    "typescript": "^4.9.4",
     "prettier": "^2.8.3",
-    "tsup": "^6.5.0"
+    "tsup": "^6.5.0",
+    "typescript": "^4.9.4"
   },
   "keywords": [
     "meilisearch",
