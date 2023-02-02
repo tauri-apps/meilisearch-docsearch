@@ -118,7 +118,10 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
 
       document
         .getElementById(`docsearch-hit-item-${activeItemIndex()}`)
-        ?.scrollIntoView({ block: "nearest", behavior: "smooth" });
+        ?.scrollIntoView({
+          block: activeItemIndex() === 0 ? "center" : "nearest",
+          behavior: "smooth",
+        });
     }
 
     if (e.key === "Enter") {
