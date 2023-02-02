@@ -4,7 +4,10 @@
     "javascript": {
       "version": true,
       "getPublishedVersion": "npm view ${ pkg.pkg } version --silent",
-      "prepublish": ["pnpm install --no-optional"],
+      "prepublish": [
+        "pnpm install --no-optional",
+        "echo 'export default \"${ pkgFile.version }\";\n' > src/version.ts"
+      ],
       "publish": [
         [
           {
@@ -25,9 +28,8 @@
         ]
       ],
       "postpublish": [
-        "git tag ${ pkg.pkg }-v${ pkgFile.versionMajor } -f",
-        "git tag ${ pkg.pkg }-v${ pkgFile.versionMajor }.${ pkgFile.versionMinor } -f",
-        "git push --tags -f"
+        "git tag ${ pkg.pkg }-v${ pkgFile.version }",
+        "git push --tags"
       ]
     }
   },

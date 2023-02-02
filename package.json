@@ -4,7 +4,8 @@
   "description": "A quick search component for meilisearch, inspired by algolia/docsearch.",
   "license": "MIT or Apache-2.0",
   "files": [
-    "dist"
+    "dist",
+    "LICENSE_*"
   ],
   "type": "module",
   "main": "./dist/index.js",
