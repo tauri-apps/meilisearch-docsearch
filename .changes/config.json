@@ -4,9 +4,7 @@
     "javascript": {
       "version": true,
       "getPublishedVersion": "npm view ${ pkg.pkg } version --silent",
-      "prepublish": [
-        "pnpm install --no-optional"
-      ],
+      "prepublish": ["pnpm install --no-optional"],
       "publish": [
         [
           {
