@@ -47,6 +47,10 @@
   "keywords": [
     "meilisearch",
     "search",
-    "docsearch"
+    "docsearch",
+    "autocomplete",
+    "docs",
+    "quicksearch",
+    "quicksearchbar"
   ]
 }
