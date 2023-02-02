@@ -1,5 +1,5 @@
 ---
-"meilisearch-docsearch": "minor"
+"meilisearch-docsearch": "patch"
 ---
 
-Initial Release.
+Testing Release.
