@@ -3,7 +3,7 @@
   "pkgManagers": {
     "javascript": {
       "version": true,
-      "getPublishedVersion": "echo '0.0.0'",
+      "getPublishedVersion": "npm view ${ pkgFile.pkg.name } version",
       "prepublish": ["pnpm install --no-optional"],
       "publish": [
         {
