@@ -1,6 +1,5 @@
 import { Component, createSignal } from "solid-js";
 import { ButtonTranslations, DocSearchButton } from "./DocSearchButton";
-import "./DocSearch.css";
 import { useDocSearchHotKeys as useHotKeys } from "./useDocSearchHotKeys";
 import { DocSearchModal, ModalTranslations } from "./DocSearchModal";
 import { Portal } from "solid-js/web";

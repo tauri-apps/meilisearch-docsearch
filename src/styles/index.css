@@ -1,0 +1,7 @@
+@import "./variables.css";
+@import "./button.css";
+@import "./modal.css";
+
+.docsearch--active {
+  overflow: hidden !important;
+}

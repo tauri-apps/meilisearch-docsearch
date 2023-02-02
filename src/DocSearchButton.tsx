@@ -1,10 +1,14 @@
-import { Component, createEffect, createSignal, onMount } from "solid-js";
+import { Component, ComponentProps, createSignal, onMount } from "solid-js";
 import { MagnifierIcon } from "./icons/Magnifier";
 
 export type ButtonTranslations = Partial<{
   buttonText: string;
   buttonAriaLabel: string;
 }>;
+
+export type DocSearchButtonProps = ComponentProps<"button"> & {
+  translations?: ButtonTranslations;
+};
 
 const ACTION_KEY_DEFAULT = "Ctrl" as const;
 const ACTION_KEY_APPLE = "⌘" as const;
@@ -13,10 +17,10 @@ function isAppleDevice() {
   return /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
 }
 
-export const DocSearchButton: Component<{
-  onClick?: (event: MouseEvent) => void;
-  translations?: ButtonTranslations;
-}> = ({ onClick, translations = {} }) => {
+export const DocSearchButton: Component<DocSearchButtonProps> = ({
+  onClick,
+  translations = {},
+}) => {
   const { buttonText = "Search", buttonAriaLabel = "Search" } = translations;
 
   const [ctrlKey, setCtrlKey] = createSignal<

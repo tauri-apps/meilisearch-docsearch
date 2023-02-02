@@ -9,6 +9,20 @@
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "default": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./solid": {
+      "default": "./dist/index.solid.jsx",
+      "types": "./dist/index.solid.d.ts"
+    },
+    "./css": "./dist/index.css",
+    "./css/variables": "./dist/variables.css",
+    "./css/button": "./dist/button.css",
+    "./css/modal": "./dist/modal.css"
+  },
   "scripts": {
     "prepublishOnly": "pnpm run build",
     "build": "tsup",
@@ -25,7 +39,7 @@
   "devDependencies": {
     "prettier": "^2.8.3",
     "tsup": "^6.5.0",
-    "tsup-preset-solid": "^0.1.5"
+    "esbuild-plugin-solid": "^0.4.2"
   },
   "keywords": [
     "meilisearch",

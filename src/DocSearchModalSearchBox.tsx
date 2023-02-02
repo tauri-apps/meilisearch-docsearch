@@ -3,6 +3,7 @@ import { CloseIcon } from "./icons/Close";
 import { MagnifierIcon } from "./icons/Magnifier";
 
 export type SearchBoxTranslations = Partial<{
+  searchDocsPlaceHolder: string;
   resetButtonTitle: string;
   resetButtonAriaLabel: string;
   cancelButtonText: string;
@@ -28,6 +29,7 @@ export const DocSearchModalSearchBox: Component<{
   translations?: SearchBoxTranslations;
 }> = ({ query, onInput, onKeyDown, onReset, onClose, translations = {} }) => {
   const {
+    searchDocsPlaceHolder = "Search docs",
     resetButtonTitle = "Clear the query",
     resetButtonAriaLabel = "Clear the query",
     cancelButtonText = "Cancel",
@@ -48,7 +50,7 @@ export const DocSearchModalSearchBox: Component<{
         <input
           type="search"
           class="docsearch-modal-search-input"
-          placeholder="Search docs"
+          placeholder={searchDocsPlaceHolder}
           value={query()}
           ref={searchInputRef}
           onInput={onInput}

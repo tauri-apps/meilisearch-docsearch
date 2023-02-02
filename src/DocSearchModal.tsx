@@ -1,4 +1,4 @@
-import { Hit, Hits, SearchParams } from "meilisearch";
+import { Hit, Hits } from "meilisearch";
 import {
   Component,
   createSignal,
@@ -9,6 +9,7 @@ import {
   Show,
   Switch,
 } from "solid-js";
+import { DocSearchProps } from "./DocSearch";
 import {
   DocSearchModalFooter,
   FooterTranslations,
@@ -27,6 +28,15 @@ import * as utils from "./utils";
 // see https://www.solidjs.com/guides/typescript#use___
 false && trapFocus;
 
+export type ModalTranslations = Partial<{ linkToTheResultAriaLabel: string }> &
+  FooterTranslations &
+  SearchBoxTranslations;
+
+export type DocSearchModalProps = DocSearchProps & {
+  onClose?: () => void;
+  translations?: ModalTranslations;
+};
+
 type FormattedHit = {
   index: number;
   category: string | null;
@@ -36,10 +46,6 @@ type FormattedHit = {
   url: string | null;
 };
 
-export type ModalTranslations = Partial<{ linkToTheResultAriaLabel: string }> &
-  FooterTranslations &
-  SearchBoxTranslations;
-
 enum ScreenState {
   Results = 0,
   NoResults,
@@ -47,16 +53,7 @@ enum ScreenState {
   EmptyQuery,
 }
 
-export const DocSearchModal: Component<{
-  host: string;
-  apiKey: string;
-  indexUid: string;
-  clientAgents?: string[];
-  searchParams?: SearchParams;
-  translations?: ModalTranslations;
-  environment?: typeof window;
-  onClose?: () => void;
-}> = ({
+export const DocSearchModal: Component<DocSearchModalProps> = ({
   host,
   apiKey,
   indexUid,

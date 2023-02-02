@@ -1,24 +1,19 @@
 import { render } from "solid-js/web";
 import { DocSearch, type DocSearchProps } from "./DocSearch";
 
-function getHTMLElement(
-  value: HTMLElement | string,
-  environment: typeof window = window
-): HTMLElement {
-  return typeof value === "string"
-    ? environment.document.querySelector<HTMLElement>(value)!
-    : value;
+interface DocSearchOptions extends DocSearchProps {
+  container: HTMLElement | string;
 }
 
-export function docsearch(
-  props: DocSearchProps & {
-    container: HTMLElement | string;
-  }
-) {
+export default function docsearch(props: DocSearchOptions) {
   render(
     () => <DocSearch {...props} />,
-    getHTMLElement(props.container, props.environment)
+    typeof props.container === "string"
+      ? (props.environment ?? window).document.querySelector<HTMLElement>(
+          props.container
+        )!
+      : props.container
   );
 }
 
-export { type DocSearchProps };
+export { docsearch, type DocSearchOptions };
