@@ -1,0 +1,42 @@
+{
+  "gitSiteUrl": "https://github.com/tauri-apps/meilisearch-docsearch/",
+  "pkgManagers": {
+    "javascript": {
+      "version": true,
+      "getPublishedVersion": "npm view ${ pkg.pkg } version --silent",
+      "prepublish": [
+        "pnpm install --no-optional"
+      ],
+      "publish": [
+        [
+          {
+            "command": "echo '<details>\n<summary><em><h4>NPM Package Publish</h4></em></summary>\n\n```'",
+            "dryRunCommand": true,
+            "pipe": true
+          },
+          {
+            "command": "pnpm publish --access public",
+            "dryRunCommand": "npm publish --dry-run --access public",
+            "pipe": true
+          },
+          {
+            "command": "echo '```\n\n</details>\n'",
+            "dryRunCommand": true,
+            "pipe": true
+          }
+        ]
+      ],
+      "postpublish": [
+        "git tag ${ pkg.pkg }-v${ pkgFile.versionMajor } -f",
+        "git tag ${ pkg.pkg }-v${ pkgFile.versionMajor }.${ pkgFile.versionMinor } -f",
+        "git push --tags -f"
+      ]
+    }
+  },
+  "packages": {
+    "meilisearch-docsearch": {
+      "path": ".",
+      "manager": "javascript"
+    }
+  }
+}
