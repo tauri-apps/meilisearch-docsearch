@@ -9,7 +9,7 @@ export interface DocSearchProps {
   host: string;
   apiKey: string;
   indexUid: string;
-  clientAgents: string[];
+  clientAgents?: string[];
   translations?: DocSearchTranslations;
   searchParams?: SearchParams;
   environment?: typeof window;
