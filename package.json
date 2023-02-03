@@ -12,12 +12,13 @@
   "types": "./dist/index.d.ts",
   "exports": {
     ".": {
-      "default": "./dist/index.js",
-      "types": "./dist/index.d.ts"
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     },
     "./solid": {
-      "default": "./dist/index.solid.jsx",
-      "types": "./dist/index.solid.d.ts"
+      "types": "./dist/index.solid.d.ts",
+      "default": "./dist/index.solid.jsx"
     },
     "./css": "./dist/index.css",
     "./css/variables": "./dist/variables.css",
