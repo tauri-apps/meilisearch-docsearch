@@ -1,11 +1,11 @@
 import { render } from "solid-js/web";
 import { DocSearch, type DocSearchProps } from "./DocSearch";
 
-interface DocSearchOptions extends DocSearchProps {
+export interface DocSearchOptions extends DocSearchProps {
   container: HTMLElement | string;
 }
 
-export default function docsearch(props: DocSearchOptions) {
+export function docsearch(props: DocSearchOptions) {
   render(
     () => <DocSearch {...props} />,
     typeof props.container === "string"
@@ -16,4 +16,4 @@ export default function docsearch(props: DocSearchOptions) {
   );
 }
 
-export { docsearch, type DocSearchOptions };
+export default docsearch;

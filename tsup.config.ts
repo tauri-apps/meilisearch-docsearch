@@ -10,7 +10,7 @@ export default defineConfig(
     [
       {
         entry: ["src/index.tsx"],
-        format: "esm",
+        format: ["esm", "cjs"],
         dts: true,
         clean: !config.watch,
         minify: !config.watch,

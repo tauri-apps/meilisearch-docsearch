@@ -1,3 +1,7 @@
+.docsearch--active {
+  overflow: hidden !important;
+}
+
 .docsearch-modal-container,
 .docsearch-modal-container * {
   box-sizing: border-box;
