@@ -4,14 +4,14 @@ specifiers:
   covector: ^0.8.0
   esbuild: ^0.17.5
   esbuild-plugin-solid: ^0.5.0
-  meilisearch: ^0.30.0
+  meilisearch: ^0.31.0
   prettier: ^2.8.3
   solid-js: ^1.6.9
   tsup: ^6.5.0
   typescript: ^4.9.4
 
 dependencies:
-  meilisearch: 0.30.0
+  meilisearch: 0.31.0
   solid-js: 1.6.9
 
 devDependencies:
@@ -1764,8 +1764,8 @@ packages:
     resolution: {integrity: sha512-AW4DRS3QbBayY/jJmD8437V1Gombjf8RSOUCMFBuo5iHi58AGEgVCKQ+ezHkZZDpAQS75hcBMpLqjpJTjtUL7w==}
     dev: true
 
-  /meilisearch/0.30.0:
-    resolution: {integrity: sha512-3y1hALOwTDpquYar+gDREqRasFPWKxkWAhk6h+RF+nKObPVf9N77wcTNvukGwOKbxRyJnKge0OPgAB1BkB9VVw==}
+  /meilisearch/0.31.0:
+    resolution: {integrity: sha512-q6iw0aaIHGYKQ2aLg4DAjIyB7Uc9m/bzuTlfUWMOo8suSocVF5BDjUysW3WMMwsS0mlj1XrqAQu85nDOZqVLFQ==}
     dependencies:
       cross-fetch: 3.1.5
     transitivePeerDependencies:
