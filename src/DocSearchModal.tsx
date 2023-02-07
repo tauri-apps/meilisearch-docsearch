@@ -87,6 +87,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
   onCleanup(() => window.removeEventListener("resize", setFullViewportHeight));
 
   const searchClient = useSearchClient({ host, apiKey, clientAgents });
+  const [loading, setLoading] = createSignal(false);
   const [query, setQuery] = createSignal("");
   const [activeItemIndex, setActiveItemIndex] = createSignal(0);
   const [hitCategories, setHitsCategories] = createSignal<string[]>([]);
@@ -151,6 +152,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
   }
 
   function onReset() {
+    setLoading(false);
     setScreenState(ScreenState.EmptyQuery);
     setHits([]);
     setHitsCategories([]);
@@ -158,6 +160,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
   }
 
   function search(query: string) {
+    setLoading(true);
     searchClient()
       .index(indexUid)
       .search(query, {
@@ -185,6 +188,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
         }
 
         const [hits, catgeories] = formatHits(res.hits);
+        setLoading(false);
         setScreenState(
           hits.length === 0 ? ScreenState.NoResults : ScreenState.Results
         );
@@ -223,6 +227,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
       <div class="docsearch-modal" use:trapFocus={{ environment }}>
         <header class="docsearch-modal-search-container">
           <DocSearchModalSearchBox
+            loading={loading}
             query={query}
             onInput={onInput}
             onKeyDown={onKeyDown}

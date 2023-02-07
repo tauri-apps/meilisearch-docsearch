@@ -1,6 +1,14 @@
-import { Accessor, Component, createSignal, onMount, Setter } from "solid-js";
+import {
+  Accessor,
+  Component,
+  createSignal,
+  onMount,
+  Setter,
+  Show,
+} from "solid-js";
 import { CloseIcon } from "./icons/Close";
 import { MagnifierIcon } from "./icons/Magnifier";
+import { LoadingIcon } from "./icons/Loading";
 
 export type SearchBoxTranslations = Partial<{
   searchDocsPlaceHolder: string;
@@ -11,6 +19,7 @@ export type SearchBoxTranslations = Partial<{
 }>;
 
 export const DocSearchModalSearchBox: Component<{
+  loading: Accessor<boolean>;
   query: Accessor<string>;
   onInput?: (
     e: InputEvent & {
@@ -27,7 +36,15 @@ export const DocSearchModalSearchBox: Component<{
   onReset?: () => void;
   onClose?: () => void;
   translations?: SearchBoxTranslations;
-}> = ({ query, onInput, onKeyDown, onReset, onClose, translations = {} }) => {
+}> = ({
+  loading,
+  query,
+  onInput,
+  onKeyDown,
+  onReset,
+  onClose,
+  translations = {},
+}) => {
   const {
     searchDocsPlaceHolder = "Search docs",
     resetButtonTitle = "Clear the query",
@@ -46,7 +63,12 @@ export const DocSearchModalSearchBox: Component<{
         onSubmit={(e) => e.preventDefault()}
         onReset={onReset}
       >
-        <MagnifierIcon class="docsearch-modal-search-input-icon" />
+        <Show
+          when={loading()}
+          fallback={<MagnifierIcon class="docsearch-modal-search-input-icon" />}
+        >
+          <LoadingIcon class="docsearch-modal-search-input-icon docsearch-modal-search-input-loading-icon" />
+        </Show>
         <input
           type="search"
           class="docsearch-modal-search-input"

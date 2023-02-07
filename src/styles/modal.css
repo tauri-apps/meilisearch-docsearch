@@ -64,10 +64,23 @@
   color: var(--docsearch-primary-color);
 }
 
-.docsearch-modal-search-input-icon::placeholder {
-  color: var(--docsearch-muted-color);
-  /* Firefox */
-  opacity: 1;
+.docsearch-modal-search-input-icon.docsearch-modal-search-input-loading-icon {
+  animation: rotation 2s infinite linear;
+}
+
+@media (prefers-reduced-motion) {
+  .docsearch-modal-search-input-icon.docsearch-modal-search-input-loading-icon {
+    animation: unset;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
 }
 
 .docsearch-modal-search-input-reset {
@@ -454,5 +467,5 @@ html[data-theme="dark"] .docsearch-modal-footer-logo-light {
 }
 
 [hidden] {
-  display: none;
+  visibility: hidden;
 }
