@@ -24,7 +24,7 @@ export default defineConfig(
         format: "esm",
         dts: true,
         clean: !config.watch,
-        minify: !config.watch,
+        minify: false,
         esbuildOptions: () => ({
           jsx: "preserve",
         }),
