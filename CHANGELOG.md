@@ -1,5 +1,10 @@
 # Changelog
 
+## \[0.4.3]
+
+- Actually fix `Uncaught ReferenceError: trapFocus is not defined` unlike version `0.4.2` which didn't fix it completely.
+  - [bc26094](https://github.com/tauri-apps/meilisearch-docsearch/commit/bc26094eb9330edf7a4d03748d1e53aaa1e66b30) fix: don't minify jsx(solid) target on 2023-02-07
+
 ## \[0.4.2]
 
 - Fix `Uncaught ReferenceError: trapFocus is not defined`
