@@ -1,5 +1,12 @@
 # Changelog
 
+## \[0.2.1]
+
+- Add `require` in `exports` table in `package.json` to acutally allow using the `cjs` target added in version `0.2`
+  - [add1d3b](https://github.com/tauri-apps/meilisearch-docsearch/commit/add1d3b8fba49a5801f8fade9b1b9e8de3ec1e59) feat: add `cjs` target on 2023-02-03
+  - [bca6dd9](https://github.com/tauri-apps/meilisearch-docsearch/commit/bca6dd918eff27ba9e960347aef0beda7e137a37) Apply Version Updates From Current Changes ([#9](https://github.com/tauri-apps/meilisearch-docsearch/pull/9)) on 2023-02-03
+  - [575705c](https://github.com/tauri-apps/meilisearch-docsearch/commit/575705cacd45734f2b7d18ace965d26fe79188bb) fix: add `require` export on 2023-02-07
+
 ## \[0.2.0]
 
 - Add support for `commonjs` target
