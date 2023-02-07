@@ -1,5 +1,10 @@
 # Changelog
 
+## \[0.4.4]
+
+- Add missing responsive css in `button.css` import
+  - [abf7eb1](https://github.com/tauri-apps/meilisearch-docsearch/commit/abf7eb1adcdcdc479beabba3f9262f8abbb5652c) fix: add missing responsive button styles for button only import on 2023-02-07
+
 ## \[0.4.3]
 
 - Actually fix `Uncaught ReferenceError: trapFocus is not defined` unlike version `0.4.2` which didn't fix it completely.
