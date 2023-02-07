@@ -29,6 +29,11 @@ export const DocSearch: Component<DocSearchProps> = (props) => {
   const onOpen = () => setIsOpen(true);
   const onClose = () => setIsOpen(false);
   const onInput = (query: string) => setInitialQuery(query);
+  const onClick = () => {
+    const selectedText = window.getSelection();
+    if (selectedText) setInitialQuery(selectedText.toString());
+    setIsOpen(true);
+  };
 
   useHotKeys({
     isOpen,
@@ -41,7 +46,7 @@ export const DocSearch: Component<DocSearchProps> = (props) => {
     <>
       <DocSearchButton
         translations={props?.translations?.button}
-        onClick={() => setIsOpen(true)}
+        onClick={onClick}
       />
       {isOpen() && (
         <Portal mount={environment.document.body}>
