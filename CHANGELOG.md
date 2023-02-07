@@ -1,5 +1,10 @@
 # Changelog
 
+## \[0.4.5]
+
+- Use correct `docsearch--active` to determine if the modal is open, instead of `DocSearch--active`
+  - [5770596](https://github.com/tauri-apps/meilisearch-docsearch/commit/5770596cbe6d4dc9e90b7f33e15fb0d4b93658c4) fix: use correct class `docsearch--active` on 2023-02-07
+
 ## \[0.4.4]
 
 - Add missing responsive css in `button.css` import
