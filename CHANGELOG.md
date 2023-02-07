@@ -1,5 +1,10 @@
 # Changelog
 
+## \[0.4.1]
+
+- Change loading icon size to match the magnifier icon size inside the search input.
+  - [7b3e737](https://github.com/tauri-apps/meilisearch-docsearch/commit/7b3e737f567b7f433ba3c9079be50d968a7169f5) fix: match loading icon size to maginifer icon on 2023-02-07
+
 ## \[0.4.0]
 
 - `docsearch` function will now return a method that could be called to destroy and remove the hotkey listeners.
