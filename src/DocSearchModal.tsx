@@ -26,7 +26,8 @@ import * as utils from "./utils";
 // DO NOT REMOVE!!
 // A trick to keep the bundler from removing the import
 // see https://www.solidjs.com/guides/typescript#use___
-false && trapFocus;
+const _d_ = false;
+if (_d_) trapFocus;
 
 export type ModalTranslations = Partial<{ linkToTheResultAriaLabel: string }> &
   FooterTranslations &
