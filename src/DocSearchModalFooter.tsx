@@ -14,7 +14,7 @@ export type FooterTranslations = Partial<{
   navigateDownKeyAriaLabel: string;
   closeText: string;
   closeKeyAriaLabel: string;
-  searchByText: string;
+  poweredByText: string;
 }>;
 
 export const DocSearchModalFooter: Component<{
@@ -28,7 +28,7 @@ export const DocSearchModalFooter: Component<{
     navigateDownKeyAriaLabel = "Arrow down",
     closeText = "to close",
     closeKeyAriaLabel = "Escape key",
-    searchByText = "Search by",
+    poweredByText = "Powered by",
   } = translations;
 
   return (
@@ -61,7 +61,7 @@ export const DocSearchModalFooter: Component<{
         </li>
       </span>
       <span class="docsearch-modal-footer-logo">
-        <span class="docsearch-modal-footer-logo-label">{searchByText}</span>
+        <span class="docsearch-modal-footer-logo-label">{poweredByText}</span>
         <a href="https://www.meilisearch.com/">
           <MeilisearchLightIcon class="docsearch-modal-footer-logo-icon docsearch-modal-footer-logo-light" />
           <MeilisearchDarkIcon class="docsearch-modal-footer-logo-icon docsearch-modal-footer-logo-dark" />
