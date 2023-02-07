@@ -1,5 +1,17 @@
 # Changelog
 
+## \[0.3.0]
+
+- Show a loading icon upon making a search request.
+  - [bbb0689](https://github.com/tauri-apps/meilisearch-docsearch/commit/bbb068909703981af9ab493205c293eb03af5897) feat: add loading icon on 2023-02-07
+  - [b67034d](https://github.com/tauri-apps/meilisearch-docsearch/commit/b67034dea04e7988a0762575a55c191c34c25ec3) chore: fix change file bump on 2023-02-07
+- Changed `Search by` to `Powered by` in the modal footer. Also changed `searchByText` to `poweredByText` in the translations options.
+  - [1ea31c0](https://github.com/tauri-apps/meilisearch-docsearch/commit/1ea31c058fb9121c9112b61bffcac83a15f0ad34) refactor: "search by" -> "powererd by" on 2023-02-07
+- Prefill search box with highlighted text
+  - [910e551](https://github.com/tauri-apps/meilisearch-docsearch/commit/910e5515231252e39478338d6e13ac6f0d8d94b7) feat: prefill search with highlighted text on 2023-02-07
+- Add support for opening the modal by pressing `s` key, however it doesn't close the modal, same as pressing `/`.
+  - [d055bd9](https://github.com/tauri-apps/meilisearch-docsearch/commit/d055bd9e6bc9371978900bdf8a10908547a3e419) feat: support `s` hotkey on 2023-02-07
+
 ## \[0.2.1]
 
 - Add `require` in `exports` table in `package.json` to acutally allow using the `cjs` target added in version `0.2`
