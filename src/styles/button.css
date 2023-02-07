@@ -72,3 +72,10 @@
   box-shadow: var(--docsearch-key-shadow);
   color: var(--docsearch-muted-color);
 }
+
+@media (max-width: 768px) {
+  .docsearch-btn-keys,
+  .docsearch-btn-placeholder {
+    display: none;
+  }
+}

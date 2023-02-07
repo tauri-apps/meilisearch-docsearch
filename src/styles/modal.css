@@ -392,11 +392,6 @@
     --docsearch-footer-height: 40px;
   }
 
-  .docsearch-btn-keys,
-  .docsearch-btn-placeholder {
-    display: none;
-  }
-
   .docsearch-modal-container {
     height: 100vh;
     height: -webkit-fill-available;
