@@ -35,7 +35,7 @@ export function useDocSearchHotKeys({
       e.preventDefault();
       if (isOpen()) {
         onClose();
-      } else if (!document.body.classList.contains("DocSearch--active")) {
+      } else if (!document.body.classList.contains("docsearch--active")) {
         // We check that no other DocSearch modal is showing before opening
         // another one.
         const selectedText = window.getSelection();
