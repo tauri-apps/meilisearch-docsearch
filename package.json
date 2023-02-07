@@ -18,6 +18,8 @@
       "default": "./dist/index.js"
     },
     "./solid": {
+      "import": "./dist/index.solid.jsx",
+      "require": "./dist/index.solid.jsx",
       "types": "./dist/index.solid.d.ts",
       "default": "./dist/index.solid.jsx"
     },
