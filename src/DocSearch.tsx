@@ -24,14 +24,17 @@ export const DocSearch: Component<DocSearchProps> = (props) => {
   const { environment = window } = props;
 
   const [isOpen, setIsOpen] = createSignal(false);
+  const [initialQuery, setInitialQuery] = createSignal<string | undefined>();
 
   const onOpen = () => setIsOpen(true);
   const onClose = () => setIsOpen(false);
+  const onInput = (query: string) => setInitialQuery(query);
 
   useHotKeys({
     isOpen,
     onOpen,
     onClose,
+    onInput,
   });
 
   return (
@@ -44,6 +47,7 @@ export const DocSearch: Component<DocSearchProps> = (props) => {
         <Portal mount={environment.document.body}>
           <DocSearchModal
             {...props}
+            initialQuery={initialQuery()}
             onClose={onClose}
             translations={props?.translations?.modal}
           />

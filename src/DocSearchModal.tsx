@@ -33,8 +33,9 @@ export type ModalTranslations = Partial<{ linkToTheResultAriaLabel: string }> &
   SearchBoxTranslations;
 
 export type DocSearchModalProps = DocSearchProps & {
-  onClose?: () => void;
   translations?: ModalTranslations;
+  onClose?: () => void;
+  initialQuery?: string;
 };
 
 type FormattedHit = {
@@ -62,6 +63,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
   environment = window,
   translations = {},
   onClose,
+  initialQuery,
 }) => {
   const { linkToTheResultAriaLabel = "Link to the result" } = translations;
 
@@ -198,6 +200,13 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
       });
   }
   const debouncedSearch = utils.debounce(search, 100);
+
+  if (initialQuery) {
+    onMount(() => {
+      setQuery(initialQuery);
+      search(initialQuery);
+    });
+  }
 
   function onInput(
     e: InputEvent & {

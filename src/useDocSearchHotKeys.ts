@@ -4,10 +4,12 @@ export function useDocSearchHotKeys({
   isOpen,
   onOpen,
   onClose,
+  onInput,
 }: {
   isOpen: Accessor<boolean>;
   onOpen: () => void;
   onClose: () => void;
+  onInput: (query: string) => void;
 }) {
   function isEditingContent(event: KeyboardEvent): boolean {
     const element = event.target as HTMLElement;
@@ -31,7 +33,13 @@ export function useDocSearchHotKeys({
       (!isEditingContent(e) && (e.key === "/" || e.key === "s") && !isOpen())
     ) {
       e.preventDefault();
-      isOpen() ? onClose() : onOpen();
+      if (isOpen()) {
+        onClose();
+      } else {
+        const selectedText = window.getSelection();
+        if (selectedText) onInput(selectedText.toString());
+        onOpen();
+      }
     }
   }
 
