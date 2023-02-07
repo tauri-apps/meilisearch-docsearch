@@ -23,19 +23,15 @@ export function useDocSearchHotKeys({
 
   function onKeyDown(e: KeyboardEvent) {
     if (
-      (e.keyCode === 27 && isOpen()) ||
+      (e.key === "Escape" && isOpen()) ||
       // The `Cmd+K` shortcut both opens and closes the modal.
       (e.key.toLowerCase() === "k" && (e.metaKey || e.ctrlKey)) ||
-      // The `/` shortcut opens but doesn't close the modal because it's
+      // The `/` or `s` shortcut opens but doesn't close the modal because it's
       // a character.
-      (!isEditingContent(e) && e.key === "/" && !isOpen())
+      (!isEditingContent(e) && (e.key === "/" || e.key === "s") && !isOpen())
     ) {
       e.preventDefault();
-      if (isOpen()) {
-        onClose();
-      } else {
-        onOpen();
-      }
+      isOpen() ? onClose() : onOpen();
     }
   }
 
