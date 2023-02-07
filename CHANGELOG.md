@@ -1,5 +1,10 @@
 # Changelog
 
+## \[0.4.2]
+
+- Fix `Uncaught ReferenceError: trapFocus is not defined`
+  - [78dff02](https://github.com/tauri-apps/meilisearch-docsearch/commit/78dff02b5cb4f97f971063e42d69d9d138d0cdd4) fix: import hack to include trapFocus directive in jsx on 2023-02-07
+
 ## \[0.4.1]
 
 - Change loading icon size to match the magnifier icon size inside the search input.
