@@ -1,5 +1,12 @@
 # Changelog
 
+## \[0.4.0]
+
+- `docsearch` function will now return a method that could be called to destroy and remove the hotkey listeners.
+  - [b465a71](https://github.com/tauri-apps/meilisearch-docsearch/commit/b465a7121febf0cd9df3bf9f14b84d1bbc6c6f7c) feat: return a destory function on 2023-02-07
+- Prefill the search with highlighted text when opening the modal by clicking the search button.
+  - [3a8742a](https://github.com/tauri-apps/meilisearch-docsearch/commit/3a8742a6cb685630457cc322c7047c58ffb77b42) feat: prefill the search if the button is clicked on 2023-02-07
+
 ## \[0.3.0]
 
 - Show a loading icon upon making a search request.
