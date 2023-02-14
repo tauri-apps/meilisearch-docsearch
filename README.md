@@ -8,11 +8,11 @@ A quick search component for meilisearch, inspired by algolia/docsearch.
 | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | ![light](https://github.com/tauri-apps/meilisearch-docsearch/raw/dev/.github/screenshot-light.png) | ![dark](https://github.com/tauri-apps/meilisearch-docsearch/raw/dev/.github/screenshot-dark.png) |
 
-# NPM (Recommended)
+# Usage through NPM (Recommended)
 
-## Installation
+### Installation
 
-```
+```sh
 yarn add meilisearch-docsearch
 # or
 npm install meilisearch-docsearch
@@ -20,9 +20,7 @@ npm install meilisearch-docsearch
 pnpm add meilisearch-docsearch
 ```
 
-## Javascript
-
-### Get started
+### Javascript
 
 To get started, you need a container for your `DocSearch` component to go in. If you don’t have one already, you can insert one into your markup:
 
@@ -46,28 +44,7 @@ docsearch({
 });
 ```
 
-## SolidJS
-
-`DocSearch` generates a fully accessible search box for you.
-
-```js
-import { DocSearch } from "meilisearch-docsearch/solid";
-import "meilisearch-docsearch/css";
-
-function App() {
-  return (
-    <DocSearch
-      host="YOUR_HOST_URL"
-      apiKey="YOUR_SEARCH_API_KEY"
-      indexUid="YOUR_INDEX_UID"
-    />
-  );
-}
-
-export default App;
-```
-
-# Styling
+### Styling
 
 All styles are included in the package as:
 
@@ -86,38 +63,60 @@ All styles are included in the package as:
     import "meilisearch-docsearch/css/modal";
     ```
 
-# CDN
+## SolidJS
 
-The package also contains a browser bundle and the necessary styles that could be pulled through a CDN like unpkg.com
+If you are using `solid-js`, you can import `DocSearch` component directely which generates a fully accessible search box for you.
 
-```html
-<head>
-  <!-- 1. import styles -->
-  <link
-    rel="stylesheet"
-    href="https://unpkg.com/meilisearch-docsearch@latest/dist/index.css"
-  />
-</head>
-<body>
-  <!-- snip -->
+```js
+import { DocSearch } from "meilisearch-docsearch/solid";
+import "meilisearch-docsearch/css";
 
-  <!-- 2. add a container -->
-  <div id="docsearch"></div>
+function App() {
+  return (
+    <DocSearch
+      host="YOUR_HOST_URL"
+      apiKey="YOUR_SEARCH_API_KEY"
+      indexUid="YOUR_INDEX_UID"
+    />
+  );
+}
 
-  <!-- 3. import browser bundle -->
-  <script src="https://unpkg.com/meilisearch-docsearch@latest/dist/index.global.js"></script>
-  <script>
-    // 4. initialize the component
-    const { docsearch } = window.__docsearch_meilisearch__;
-    docsearch({
-      container: "#docsearch",
-      host: "YOUR_HOST_URL",
-      apiKey: "YOUR_SEARCH_API_KEY",
-      indexUid: "YOUR_INDEX_UID",
-    });
-  </script>
-</body>
+export default App;
 ```
+
+# Usage through CDN
+
+The package also contains a browser bundle and the necessary styles that could be pulled through a CDN like unpkg.com:
+
+1. add a container
+
+   ```html
+   <div id="docsearch"></div>
+   ```
+
+2. import the js borwser bundle and initialize the component
+
+   ```html
+   <script src="https://unpkg.com/meilisearch-docsearch@latest/dist/index.global.js"></script>
+   <script>
+     const { docsearch } = window.__docsearch_meilisearch__;
+     docsearch({
+       container: "#docsearch",
+       host: "YOUR_HOST_URL",
+       apiKey: "YOUR_SEARCH_API_KEY",
+       indexUid: "YOUR_INDEX_UID",
+     });
+   </script>
+   ```
+
+3. import styles
+
+   ```html
+   <link
+     rel="stylesheet"
+     href="https://unpkg.com/meilisearch-docsearch@latest/dist/index.css"
+   />
+   ```
 
 # Acknowledgement
 
