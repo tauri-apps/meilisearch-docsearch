@@ -1,5 +1,10 @@
 # Changelog
 
+## \[0.4.6]
+
+- Add global/browser target so the package could be used from a CDN like unpkg.com
+  - [0748856](https://github.com/tauri-apps/meilisearch-docsearch/commit/0748856d256120020434735eb70d78b4f3c55a57) feat: add browser bundle, closes [#19](https://github.com/tauri-apps/meilisearch-docsearch/pull/19) ([#20](https://github.com/tauri-apps/meilisearch-docsearch/pull/20)) on 2023-02-14
+
 ## \[0.4.5]
 
 - Use correct `docsearch--active` to determine if the modal is open, instead of `DocSearch--active`
