@@ -20,6 +20,21 @@ export default defineConfig(
         },
       },
       {
+        entry: ["src/index.tsx"],
+        format: ["iife"],
+        clean: !config.watch,
+        minify: !config.watch,
+        esbuildPlugins: [solidPlugin()],
+        env: {
+          VERSION,
+        },
+        globalName: "__docsearch_meilisearch__",
+        platform: "browser",
+        footer: {
+          js: "if (!'__docsearch_meilisearch__' in window) window.__docsearch_meilisearch__ = __docsearch_meilisearch__",
+        },
+      },
+      {
         entry: ["src/index.solid.tsx"],
         format: "esm",
         dts: true,
