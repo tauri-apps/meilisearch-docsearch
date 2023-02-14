@@ -1,5 +1,10 @@
 # Changelog
 
+## \[0.4.7]
+
+- Re-order `types` field to be the first in package.json `exports`.
+  - [7f60b91](https://github.com/tauri-apps/meilisearch-docsearch/commit/7f60b91de672b7d9c8d4444647e12fa4fe2f443c) fix: move `types` field to be first on 2023-02-14
+
 ## \[0.4.6]
 
 - Add global/browser target so the package could be used from a CDN like unpkg.com
