@@ -8,7 +8,7 @@ specifiers:
   prettier: ^2.8.3
   solid-js: ^1.6.9
   tsup: ^6.5.0
-  typescript: ^4.9.4
+  typescript: ^5.0.0
 
 dependencies:
   meilisearch: 0.31.0
@@ -19,8 +19,8 @@ devDependencies:
   esbuild: 0.17.5
   esbuild-plugin-solid: 0.5.0_io7cryizhyuqtqybyq7a5nxrlm
   prettier: 2.8.3
-  tsup: 6.5.0_typescript@4.9.4
-  typescript: 4.9.4
+  tsup: 6.5.0_typescript@5.0.2
+  typescript: 5.0.2
 
 packages:
 
@@ -2238,7 +2238,7 @@ packages:
     resolution: {integrity: sha512-336iVw3rtn2BUK7ORdIAHTyxHGRIHVReokCR3XjbckJMK7ms8FysBfhLR8IXnAgy7T0PTPNBWKiH514FOW/WSg==}
     dev: true
 
-  /tsup/6.5.0_typescript@4.9.4:
+  /tsup/6.5.0_typescript@5.0.2:
     resolution: {integrity: sha512-36u82r7rYqRHFkD15R20Cd4ercPkbYmuvRkz3Q1LCm5BsiFNUgpo36zbjVhCOgvjyxNBWNKHsaD5Rl8SykfzNA==}
     engines: {node: '>=14'}
     hasBin: true
@@ -2268,7 +2268,7 @@ packages:
       source-map: 0.8.0-beta.0
       sucrase: 3.29.0
       tree-kill: 1.2.2
-      typescript: 4.9.4
+      typescript: 5.0.2
     transitivePeerDependencies:
       - supports-color
       - ts-node
@@ -2284,9 +2284,9 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /typescript/4.9.4:
-    resolution: {integrity: sha512-Uz+dTXYzxXXbsFpM86Wh3dKCxrQqUcVMxwU54orwlJjOpO3ao8L7j5lH+dWfTwgCwIuM9GQ2kvVotzYJMXTBZg==}
-    engines: {node: '>=4.2.0'}
+  /typescript/5.0.2:
+    resolution: {integrity: sha512-wVORMBGO/FAs/++blGNeAVdbNKtIh1rbBL2EyQ1+J9lClJ93KiiKe8PmFIVdXhHcyv44SL9oglmfeSsndo0jRw==}
+    engines: {node: '>=12.20'}
     hasBin: true
     dev: true
 
