@@ -46,7 +46,7 @@ export const DocSearchModalSearchBox: Component<{
   translations = {},
 }) => {
   const {
-    searchDocsPlaceHolder = "Search docs",
+    searchDocsPlaceHolder = "Search",
     resetButtonTitle = "Clear the query",
     resetButtonAriaLabel = "Clear the query",
     cancelButtonText = "Cancel",
