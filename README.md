@@ -52,7 +52,7 @@ All styles are included in the package as:
   - ```js
     import "meilisearch-docsearch/css";
     ```
-- Invidual small files:
+- Individual small files:
   - ```js
     import "meilisearch-docsearch/css/variables";
     ```
