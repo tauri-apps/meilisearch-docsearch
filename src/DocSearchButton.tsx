@@ -47,7 +47,7 @@ export const DocSearchButton: Component<DocSearchButtonProps> = ({
       </span>
       <span class="docsearch-btn-placeholder"> {buttonText} </span>
       <span class="docsearch-btn-keys">
-        <kbd class="docsearch-btn-key">{ctrlKey}</kbd>
+        <kbd class="docsearch-btn-key">{ctrlKey()}</kbd>
         <kbd class="docsearch-btn-key">K</kbd>
       </span>
     </button>
