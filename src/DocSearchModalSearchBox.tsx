@@ -25,13 +25,13 @@ export const DocSearchModalSearchBox: Component<{
     e: InputEvent & {
       currentTarget: HTMLInputElement;
       target: Element;
-    }
+    },
   ) => void;
   onKeyDown?: (
     e: KeyboardEvent & {
       currentTarget: HTMLInputElement;
       target: Element;
-    }
+    },
   ) => void;
   onReset?: () => void;
   onClose?: () => void;

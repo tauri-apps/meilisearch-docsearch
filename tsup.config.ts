@@ -60,5 +60,5 @@ export default defineConfig(
         clean: !config.watch,
         minify: !config.watch,
       },
-    ] as Options[]
+    ] as Options[],
 );
