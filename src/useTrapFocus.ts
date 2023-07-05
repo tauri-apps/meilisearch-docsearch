@@ -10,13 +10,13 @@ declare module "solid-js" {
 
 export default function trapFocus(
   el: HTMLElement,
-  value: Accessor<{ environment?: typeof window }>
+  value: Accessor<{ environment?: typeof window }>,
 ) {
   const { environment = window } = value();
 
   onMount(() => {
     const focusableElements = el.querySelectorAll<HTMLElement>(
-      "a[href]:not([disabled]), button:not([disabled]), input:not([disabled])"
+      "a[href]:not([disabled]), button:not([disabled]), input:not([disabled])",
     );
     const firstElement = focusableElements[0];
     const lastElement = focusableElements[focusableElements.length - 1];

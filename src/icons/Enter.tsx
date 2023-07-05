@@ -1,7 +1,7 @@
 import { Component } from "solid-js";
 
 export const EnterIcon: Component<{ class?: string; "aria-label"?: string }> = (
-  props
+  props,
 ) => {
   return (
     <svg

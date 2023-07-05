@@ -96,7 +96,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
   const [hitCategories, setHitsCategories] = createSignal<string[]>([]);
   const [hits, setHits] = createSignal<FormattedHit[]>([]);
   const [screenState, setScreenState] = createSignal<ScreenState>(
-    ScreenState.EmptyQuery
+    ScreenState.EmptyQuery,
   );
   const numberOfHits = () => hits().length;
 
@@ -104,7 +104,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
     e: KeyboardEvent & {
       currentTarget: HTMLInputElement;
       target: Element;
-    }
+    },
   ) {
     if (e.key === "ArrowUp" || e.key === "ArrowDown") {
       e.preventDefault();
@@ -135,14 +135,14 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
         const windowRef = environment.open(
           hits()[activeItemIndex()].url ?? "",
           "_blank",
-          "noopener"
+          "noopener",
         );
         windowRef?.focus();
       } else if (e.shiftKey) {
         environment.open(
           hits()[activeItemIndex()].url ?? "",
           "_blank",
-          "noopener"
+          "noopener",
         );
       } else {
         environment.location.assign(hits()[activeItemIndex()].url ?? "");
@@ -193,7 +193,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
         const [hits, catgeories] = formatHits(res.hits);
         setLoading(false);
         setScreenState(
-          hits.length === 0 ? ScreenState.NoResults : ScreenState.Results
+          hits.length === 0 ? ScreenState.NoResults : ScreenState.Results,
         );
         setActiveItemIndex(0);
         setHits(hits);
@@ -213,7 +213,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
     e: InputEvent & {
       currentTarget: HTMLInputElement;
       target: Element;
-    }
+    },
   ) {
     const query = e.currentTarget?.value;
     setQuery(query);
@@ -355,7 +355,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
 };
 
 function formatHits(
-  receivedHits: Hits<Record<string, any>>
+  receivedHits: Hits<Record<string, any>>,
 ): [FormattedHit[], string[]] {
   const clonedHits = utils.deepClone(receivedHits);
   const hits = clonedHits.map((hit) => {
@@ -385,7 +385,7 @@ function formatHits(
           .join('<span aria-hidden="true"> › </span>'),
         text: utils.getSnippetedValue(hit, "content"),
         url: formatURL(hit),
-      }))
+      })),
     )
     .flat()
     .map((h, index) => ({

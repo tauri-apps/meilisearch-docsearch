@@ -17,8 +17,8 @@ export function useSearchClient({
         host,
         apiKey,
         clientAgents: clientAgents.concat(
-          `Meilisearch docs-searchbar.js (v${version}`
+          `Meilisearch docs-searchbar.js (v${version}`,
         ),
-      })
+      }),
   );
 }

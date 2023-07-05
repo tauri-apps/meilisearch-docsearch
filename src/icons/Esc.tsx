@@ -1,7 +1,7 @@
 import { Component } from "solid-js";
 
 export const EscIcon: Component<{ class?: string; "aria-label"?: string }> = (
-  props
+  props,
 ) => {
   return (
     <svg

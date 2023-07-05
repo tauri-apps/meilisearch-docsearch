@@ -18,7 +18,7 @@
  */
 export function renameKeysWithLevels<T extends Record<any, any>>(
   object: T,
-  prefix: string
+  prefix: string,
 ): T {
   return Object.keys(object).reduce((acc, key) => {
     const result: any = acc;
@@ -38,7 +38,7 @@ export function renameKeysWithLevels<T extends Record<any, any>>(
  * @return null or {String}
  */
 export function replaceNullString<T extends { [key: string]: unknown }>(
-  object: T
+  object: T,
 ): T {
   return Object.keys(object).reduce((acc, key) => {
     const result: any = acc;
@@ -84,7 +84,7 @@ export function replaceNullString<T extends { [key: string]: unknown }>(
  */
 export function groupBy<T, K extends keyof T>(
   collection: T[],
-  property: K
+  property: K,
 ): { [K in keyof T]: T[] } {
   const newCollection: any = {};
   collection.forEach((item: any) => {
@@ -141,7 +141,7 @@ export function compact<T>(array: T[]) {
  **/
 export function getHighlightedValue<T extends Record<any, any>>(
   object: T,
-  property: string
+  property: string,
 ): string {
   if (
     object._formatted &&
@@ -163,7 +163,7 @@ export function replaceHtmlTagsToHighlight(str: string) {
   return str
     .replace(
       /<em>/g,
-      '<span class="docsearch-modal-search-hits-item--highlight">'
+      '<span class="docsearch-modal-search-hits-item--highlight">',
     )
     .replace(/<\/em>/g, "</span>");
 }
@@ -219,7 +219,7 @@ export function deepClone<T>(object: T): T {
  */
 export function debounce<F extends (...args: Parameters<F>) => ReturnType<F>>(
   func: F,
-  waitFor: number = 300
+  waitFor: number = 300,
 ): (...args: Parameters<F>) => void {
   let timeout: number;
   return (...args: Parameters<F>): void => {

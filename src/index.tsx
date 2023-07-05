@@ -21,9 +21,9 @@ export function docsearch(props: DocSearchOptions): () => void {
     ),
     typeof props.container === "string"
       ? (props.environment ?? window).document.querySelector<HTMLElement>(
-          props.container
+          props.container,
         )!
-      : props.container
+      : props.container,
   );
   return () => setRender(false);
 }
