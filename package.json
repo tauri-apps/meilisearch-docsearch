@@ -41,7 +41,7 @@
     "solid-js": "^1.7.7"
   },
   "devDependencies": {
-    "covector": "^0.9.0",
+    "covector": "^0.10.0",
     "esbuild": "^0.18.10",
     "esbuild-plugin-solid": "^0.5.0",
     "prettier": "^3.0.0",
