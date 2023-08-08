@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "covector": "^0.10.0",
-    "esbuild": "^0.18.10",
+    "esbuild": "^0.19.0",
     "esbuild-plugin-solid": "^0.5.0",
     "prettier": "^3.0.0",
     "tsup": "^7.1.0",
