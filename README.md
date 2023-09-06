@@ -120,7 +120,7 @@ The package also contains a browser bundle and the necessary styles that could b
 
 # Acknowledgement
 
-This project is inspired by [`aloglia/docsearch`](https://github.com/algolia/docsearch/) and [`meilisearch/docs-searchbar.js`](https://github.com/meilisearch/docs-searchbar.js/)
+This project is inspired by [`algolia/docsearch`](https://github.com/algolia/docsearch/) and [`meilisearch/docs-searchbar.js`](https://github.com/meilisearch/docs-searchbar.js/)
 
 # LICENSE
 
