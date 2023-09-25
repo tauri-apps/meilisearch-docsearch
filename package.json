@@ -37,7 +37,7 @@
     "format:check": "prettier --check \"./**/*.{js,jsx,ts,tsx,json,html,css}\" --ignore-path .gitignore"
   },
   "dependencies": {
-    "meilisearch": "^0.34.0",
+    "meilisearch": "^0.35.0",
     "solid-js": "^1.7.7"
   },
   "devDependencies": {

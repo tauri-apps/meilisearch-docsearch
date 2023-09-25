@@ -9,8 +9,8 @@ overrides:
 
 dependencies:
   meilisearch:
-    specifier: ^0.34.0
-    version: 0.34.0
+    specifier: ^0.35.0
+    version: 0.35.0
   solid-js:
     specifier: ^1.7.7
     version: 1.7.7
@@ -1905,8 +1905,8 @@ packages:
     resolution: {integrity: sha512-AW4DRS3QbBayY/jJmD8437V1Gombjf8RSOUCMFBuo5iHi58AGEgVCKQ+ezHkZZDpAQS75hcBMpLqjpJTjtUL7w==}
     dev: true
 
-  /meilisearch@0.34.0:
-    resolution: {integrity: sha512-qJV75gT2R38C+9x/o10AjfYmT33uLGOKdcQawrV1v1liI3RUs2ZvBP87bPhhQ06Bws0BA82yVXNLpS6l5wi4uA==}
+  /meilisearch@0.35.0:
+    resolution: {integrity: sha512-gF1I6K5/Wpe7BWfjBnG+o19y/FIpJ9HbN+byON6CB9U3uE7qc6GvwUbjKOllh7LKXQVVxH/kCu7Jn0ODCUwqbQ==}
     dependencies:
       cross-fetch: 3.1.6
     transitivePeerDependencies:
