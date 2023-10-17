@@ -1,5 +1,9 @@
 # Changelog
 
+## \[0.5.0]
+
+- [`9d93b32`](https://github.com/tauri-apps/meilisearch-docsearch/commit/9d93b32b47f247069acd4bfbb6297e5a9de68e80) Update `meilisearch` dependency to `0.35.0`
+
 ## \[0.4.7]
 
 - Re-order `types` field to be the first in package.json `exports`.
