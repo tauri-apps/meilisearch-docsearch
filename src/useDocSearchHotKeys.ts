@@ -1,15 +1,25 @@
 import { Accessor, onCleanup, onMount } from "solid-js";
 
+export type DocSearchHotKeys = Partial<{
+  ctrlWithKey: string | false;
+  singleKeys: string[] | false;
+}>;
+
 export function useDocSearchHotKeys({
   isOpen,
   onOpen,
   onClose,
   onInput,
+  hotKeys = {
+    ctrlWithKey: "k",
+    singleKeys: ["s", "/"],
+  },
 }: {
   isOpen: Accessor<boolean>;
   onOpen: () => void;
   onClose: () => void;
   onInput: (query: string) => void;
+  hotKeys?: DocSearchHotKeys;
 }) {
   function isEditingContent(event: KeyboardEvent): boolean {
     const element = event.target as HTMLElement;
@@ -27,10 +37,10 @@ export function useDocSearchHotKeys({
     if (
       (e.key === "Escape" && isOpen()) ||
       // The `Cmd+K` shortcut both opens and closes the modal.
-      (e.key.toLowerCase() === "k" && (e.metaKey || e.ctrlKey)) ||
+      (hotKeys.ctrlWithKey && e.key.toLowerCase() === hotKeys.ctrlWithKey.toLowerCase() && (e.metaKey || e.ctrlKey)) ||
       // The `/` or `s` shortcut opens but doesn't close the modal because it's
       // a character.
-      (!isEditingContent(e) && (e.key === "/" || e.key === "s") && !isOpen())
+      (!isEditingContent(e) && (hotKeys.singleKeys && hotKeys.singleKeys.some(k => k.toLowerCase() === e.key.toLowerCase())) && !isOpen())
     ) {
       e.preventDefault();
       if (isOpen()) {

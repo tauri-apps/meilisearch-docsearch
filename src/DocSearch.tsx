@@ -1,6 +1,6 @@
 import { Component, createSignal } from "solid-js";
 import { ButtonTranslations, DocSearchButton } from "./DocSearchButton";
-import { useDocSearchHotKeys as useHotKeys } from "./useDocSearchHotKeys";
+import { useDocSearchHotKeys as useHotKeys, DocSearchHotKeys } from "./useDocSearchHotKeys";
 import { DocSearchModal, ModalTranslations } from "./DocSearchModal";
 import { Portal } from "solid-js/web";
 import { SearchParams } from "meilisearch";
@@ -10,6 +10,7 @@ export interface DocSearchProps {
   apiKey: string;
   indexUid: string;
   clientAgents?: string[];
+  hotKeys?: DocSearchHotKeys;
   translations?: DocSearchTranslations;
   searchParams?: SearchParams;
   environment?: typeof window;
@@ -40,12 +41,14 @@ export const DocSearch: Component<DocSearchProps> = (props) => {
     onOpen,
     onClose,
     onInput,
+    hotKeys: props?.hotKeys,
   });
 
   return (
     <>
       <DocSearchButton
         translations={props?.translations?.button}
+        ctrlWithKey={props?.hotKeys?.ctrlWithKey}
         onClick={onClick}
       />
       {isOpen() && (

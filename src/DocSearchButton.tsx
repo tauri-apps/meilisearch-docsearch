@@ -8,6 +8,7 @@ export type ButtonTranslations = Partial<{
 
 export type DocSearchButtonProps = ComponentProps<"button"> & {
   translations?: ButtonTranslations;
+  ctrlWithKey?: string | false;
 };
 
 const ACTION_KEY_DEFAULT = "Ctrl" as const;
@@ -19,6 +20,7 @@ function isAppleDevice() {
 
 export const DocSearchButton: Component<DocSearchButtonProps> = ({
   onClick,
+  ctrlWithKey = "k",
   translations = {},
 }) => {
   const { buttonText = "Search", buttonAriaLabel = "Search" } = translations;
@@ -46,10 +48,12 @@ export const DocSearchButton: Component<DocSearchButtonProps> = ({
         <MagnifierIcon class="docsearch-modal-btn-icon" />
       </span>
       <span class="docsearch-btn-placeholder"> {buttonText} </span>
-      <span class="docsearch-btn-keys">
-        <kbd class="docsearch-btn-key">{ctrlKey()}</kbd>
-        <kbd class="docsearch-btn-key">K</kbd>
-      </span>
+      {ctrlWithKey && (
+        <span class="docsearch-btn-keys">
+          <kbd class="docsearch-btn-key">{ctrlKey()}</kbd>
+          <kbd class="docsearch-btn-key">{ctrlWithKey.toUpperCase()}</kbd>
+        </span>
+      )}
     </button>
   );
 };
