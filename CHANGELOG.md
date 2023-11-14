@@ -1,5 +1,9 @@
 # Changelog
 
+## \[0.6.0]
+
+- [`5d69f23`](https://github.com/tauri-apps/meilisearch-docsearch/commit/5d69f23ce32b40710460b1b23b4917ade00131e8)([#44](https://github.com/tauri-apps/meilisearch-docsearch/pull/44)) Add the options to define custom hotkeys or disable the default ones.
+
 ## \[0.5.0]
 
 - [`9d93b32`](https://github.com/tauri-apps/meilisearch-docsearch/commit/9d93b32b47f247069acd4bfbb6297e5a9de68e80) Update `meilisearch` dependency to `0.35.0`
