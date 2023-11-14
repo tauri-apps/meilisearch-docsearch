@@ -227,3 +227,19 @@ export function debounce<F extends (...args: Parameters<F>) => ReturnType<F>>(
     timeout = setTimeout(() => func(...args), waitFor);
   };
 }
+
+export function isCtrl(key: string) {
+  return /(ctrl|control|command|cmd|commandorcontrl|cmdorctrl)/i.test(key);
+}
+
+export function isAlt(key: string) {
+  return /(alt|option)/i.test(key);
+}
+
+export function isMeta(key: string) {
+  return /(meta|super)/i.test(key);
+}
+
+export function isAppleDevice() {
+  return /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
+}

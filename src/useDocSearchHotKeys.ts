@@ -1,9 +1,7 @@
 import { Accessor, onCleanup, onMount } from "solid-js";
+import { isAlt, isAppleDevice, isCtrl, isMeta } from "./utils";
 
-export type DocSearchHotKeys = {
-  ctrlWithKey?: string | false;
-  singleKeys?: string[] | false;
-};
+export type DocSearchHotKeys = string[] | false;
 
 export function useDocSearchHotKeys({
   isOpen,
@@ -30,22 +28,51 @@ export function useDocSearchHotKeys({
     );
   }
 
+  function isHotKey(event: KeyboardEvent): boolean {
+    const modsAndkeys =
+      hotKeys && hotKeys.map((k) => k.toLowerCase().split("+"));
+
+    if (modsAndkeys) {
+      return modsAndkeys.some((modsAndkeys) => {
+        // if hotkey is a single character, we only react if modal is not open
+        if (
+          modsAndkeys.length === 1 &&
+          event.key.toLowerCase() === modsAndkeys[0] &&
+          !event.ctrlKey &&
+          !event.altKey &&
+          !event.shiftKey &&
+          !isEditingContent(event) &&
+          !isOpen()
+        ) {
+          return true;
+        }
+
+        // modifiers and key
+        if (modsAndkeys.length > 1) {
+          const key = modsAndkeys[modsAndkeys.length - 1];
+
+          if (event.key.toLowerCase() !== key) return false;
+
+          const ctrl =
+            (isAppleDevice() ? event.metaKey : event.ctrlKey) ==
+            modsAndkeys.some(isCtrl);
+          const shift = event.shiftKey == modsAndkeys.includes("shift");
+          const alt = event.altKey == modsAndkeys.some(isAlt);
+          const meta =
+            !isAppleDevice() && event.metaKey == modsAndkeys.some(isMeta);
+
+          return ctrl && shift && alt && meta;
+        }
+
+        return false;
+      });
+    }
+
+    return false;
+  }
+
   function onKeyDown(e: KeyboardEvent) {
-    if (
-      (e.key === "Escape" && isOpen()) ||
-      // The Ctrl(⌘) combined with the `ctrlWithKey` shortcut both opens and closes the modal.
-      (hotKeys.ctrlWithKey &&
-        e.key.toLowerCase() === hotKeys.ctrlWithKey.toLowerCase() &&
-        (e.metaKey || e.ctrlKey)) ||
-      // The one of `singleKeys` shortcut opens but doesn't close the modal because it's
-      // a character.
-      (!isEditingContent(e) &&
-        hotKeys.singleKeys &&
-        hotKeys.singleKeys.some(
-          (k) => k.toLowerCase() === e.key.toLowerCase(),
-        ) &&
-        !isOpen())
-    ) {
+    if ((e.key === "Escape" && isOpen()) || isHotKey(e)) {
       e.preventDefault();
       if (isOpen()) {
         onClose();

@@ -13,6 +13,15 @@ export interface DocSearchProps {
   apiKey: string;
   indexUid: string;
   clientAgents?: string[];
+  /**
+   * An array of hotkeys to trigger the search modal.
+   * Can be either a single character, for example `s` or `/`,
+   * or a combination of modifiers and key, for example `ctrl+k`.
+   *
+   * Default keys are `['ctrl+k', 's', '/']`
+   *
+   * Set to `false` to disable default keys.
+   */
   hotKeys?: DocSearchHotKeys;
   translations?: DocSearchTranslations;
   searchParams?: SearchParams;
@@ -24,15 +33,10 @@ export type DocSearchTranslations = Partial<{
   modal: ModalTranslations;
 }>;
 
+const DEFAULT_HOTKEYS = ["ctrl+k", "s", "/"];
+
 export const DocSearch: Component<DocSearchProps> = (props) => {
-  const { environment = window } = props;
-  // The default hot keys are combination `Ctrl(⌘) + K`, and single keys `s` and `/`.
-  // To disable them, set each of the corresponding options to false.
-  const hotKeys = {
-    ctrlWithKey: "k",
-    singleKeys: ["s", "/"],
-    ...props.hotKeys,
-  };
+  const { environment = window, hotKeys = DEFAULT_HOTKEYS } = props;
 
   const [isOpen, setIsOpen] = createSignal(false);
   const [initialQuery, setInitialQuery] = createSignal<string | undefined>();

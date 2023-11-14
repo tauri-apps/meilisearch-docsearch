@@ -1,6 +1,13 @@
-import { Component, ComponentProps, createSignal, onMount } from "solid-js";
+import {
+  Component,
+  ComponentProps,
+  For,
+  createSignal,
+  onMount,
+} from "solid-js";
 import { MagnifierIcon } from "./icons/Magnifier";
 import { DocSearchHotKeys } from "./useDocSearchHotKeys";
+import { isAlt, isAppleDevice, isCtrl } from "./utils";
 
 export type ButtonTranslations = Partial<{
   buttonText: string;
@@ -12,12 +19,10 @@ export type DocSearchButtonProps = ComponentProps<"button"> & {
   translations?: ButtonTranslations;
 };
 
-const ACTION_KEY_DEFAULT = "Ctrl" as const;
-const ACTION_KEY_APPLE = "⌘" as const;
-
-function isAppleDevice() {
-  return /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform);
-}
+const CTRL_KEY_DEFAULT = "Ctrl" as const;
+const CTRL_KEY_APPLE = "⌘" as const;
+const ALT_KEY_DEFAULT = "Alt" as const;
+const ALT_KEY_APPLE = "Option" as const;
 
 export const DocSearchButton: Component<DocSearchButtonProps> = ({
   onClick,
@@ -27,14 +32,21 @@ export const DocSearchButton: Component<DocSearchButtonProps> = ({
   const { buttonText = "Search", buttonAriaLabel = "Search" } = translations;
 
   const [ctrlKey, setCtrlKey] = createSignal<
-    typeof ACTION_KEY_APPLE | typeof ACTION_KEY_DEFAULT | null
+    typeof CTRL_KEY_DEFAULT | typeof CTRL_KEY_APPLE | null
+  >(null);
+  const [altKey, setAltKey] = createSignal<
+    typeof ALT_KEY_DEFAULT | typeof ALT_KEY_APPLE | null
   >(null);
 
   onMount(() => {
     if (typeof navigator !== "undefined") {
-      isAppleDevice()
-        ? setCtrlKey(ACTION_KEY_APPLE)
-        : setCtrlKey(ACTION_KEY_DEFAULT);
+      if (isAppleDevice()) {
+        setCtrlKey(CTRL_KEY_APPLE);
+        setAltKey(ALT_KEY_APPLE);
+      } else {
+        setCtrlKey(CTRL_KEY_DEFAULT);
+        setAltKey(ALT_KEY_DEFAULT);
+      }
     }
   });
 
@@ -49,22 +61,20 @@ export const DocSearchButton: Component<DocSearchButtonProps> = ({
         <MagnifierIcon class="docsearch-modal-btn-icon" />
       </span>
       <span class="docsearch-btn-placeholder"> {buttonText} </span>
-      {hotKeys.ctrlWithKey ? (
+      {hotKeys && hotKeys.length > 0 && (
         <span class="docsearch-btn-keys">
-          <kbd class="docsearch-btn-key">{ctrlKey()}</kbd>
-          <kbd class="docsearch-btn-key">
-            {hotKeys.ctrlWithKey.toUpperCase()}
-          </kbd>
+          <For each={hotKeys[0].split("+")}>
+            {(k) => (
+              <kbd class="docsearch-btn-key">
+                {isCtrl(k)
+                  ? ctrlKey()
+                  : isAlt(k)
+                    ? altKey()
+                    : k[0].toUpperCase() + k.slice(1)}
+              </kbd>
+            )}
+          </For>
         </span>
-      ) : (
-        hotKeys.singleKeys &&
-        hotKeys.singleKeys.length > 0 && (
-          <span class="docsearch-btn-keys">
-            <kbd class="docsearch-btn-key">
-              {hotKeys.singleKeys[0].toUpperCase()}
-            </kbd>
-          </span>
-        )
       )}
     </button>
   );

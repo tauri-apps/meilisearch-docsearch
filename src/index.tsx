@@ -3,6 +3,7 @@ import { render } from "solid-js/web";
 import { DocSearch, type DocSearchProps } from "./DocSearch";
 
 export interface DocSearchOptions extends DocSearchProps {
+  /* Container in which the search button will be added to. */
   container: HTMLElement | string;
 }
 
