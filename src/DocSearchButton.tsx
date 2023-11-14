@@ -69,8 +69,8 @@ export const DocSearchButton: Component<DocSearchButtonProps> = ({
                 {isCtrl(k)
                   ? ctrlKey()
                   : isAlt(k)
-                  ? altKey()
-                  : k[0].toUpperCase() + k.slice(1)}
+                    ? altKey()
+                    : k[0].toUpperCase() + k.slice(1)}
               </kbd>
             )}
           </For>
