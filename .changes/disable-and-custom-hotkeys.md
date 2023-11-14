@@ -2,4 +2,4 @@
 "meilisearch-docsearch": "minor"
 ---
 
-Add the options to disable the default hotkeys or set custom ones.
+Add the options to define custom hotkeys or disable the default ones.

@@ -1,9 +1,9 @@
 import { Accessor, onCleanup, onMount } from "solid-js";
 
-export type DocSearchHotKeys = Partial<{
-  ctrlWithKey: string | false;
-  singleKeys: string[] | false;
-}>;
+export type DocSearchHotKeys = {
+  ctrlWithKey?: string | false;
+  singleKeys?: string[] | false;
+};
 
 export function useDocSearchHotKeys({
   isOpen,
