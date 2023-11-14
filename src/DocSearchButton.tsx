@@ -1,5 +1,6 @@
 import { Component, ComponentProps, createSignal, onMount } from "solid-js";
 import { MagnifierIcon } from "./icons/Magnifier";
+import { DocSearchHotKeys } from "./useDocSearchHotKeys";
 
 export type ButtonTranslations = Partial<{
   buttonText: string;
@@ -7,8 +8,8 @@ export type ButtonTranslations = Partial<{
 }>;
 
 export type DocSearchButtonProps = ComponentProps<"button"> & {
+  hotKeys: DocSearchHotKeys;
   translations?: ButtonTranslations;
-  ctrlWithKey?: string | false;
 };
 
 const ACTION_KEY_DEFAULT = "Ctrl" as const;
@@ -20,7 +21,7 @@ function isAppleDevice() {
 
 export const DocSearchButton: Component<DocSearchButtonProps> = ({
   onClick,
-  ctrlWithKey = "k",
+  hotKeys,
   translations = {},
 }) => {
   const { buttonText = "Search", buttonAriaLabel = "Search" } = translations;
@@ -48,11 +49,22 @@ export const DocSearchButton: Component<DocSearchButtonProps> = ({
         <MagnifierIcon class="docsearch-modal-btn-icon" />
       </span>
       <span class="docsearch-btn-placeholder"> {buttonText} </span>
-      {ctrlWithKey && (
+      {hotKeys.ctrlWithKey ? (
         <span class="docsearch-btn-keys">
           <kbd class="docsearch-btn-key">{ctrlKey()}</kbd>
-          <kbd class="docsearch-btn-key">{ctrlWithKey.toUpperCase()}</kbd>
+          <kbd class="docsearch-btn-key">
+            {hotKeys.ctrlWithKey.toUpperCase()}
+          </kbd>
         </span>
+      ) : (
+        hotKeys.singleKeys &&
+        hotKeys.singleKeys.length > 0 && (
+          <span class="docsearch-btn-keys">
+            <kbd class="docsearch-btn-key">
+              {hotKeys.singleKeys[0].toUpperCase()}
+            </kbd>
+          </span>
+        )
       )}
     </button>
   );
