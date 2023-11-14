@@ -37,16 +37,16 @@
     "format:check": "prettier --check \"./**/*.{js,jsx,ts,tsx,json,html,css}\" --ignore-path .gitignore"
   },
   "dependencies": {
-    "meilisearch": "^0.35.0",
-    "solid-js": "^1.8.1"
+    "meilisearch": "0.35.0",
+    "solid-js": "1.8.1"
   },
   "devDependencies": {
-    "covector": "^0.10.2",
-    "esbuild": "^0.19.4",
-    "esbuild-plugin-solid": "^0.5.0",
-    "prettier": "^3.0.3",
-    "tsup": "^7.2.0",
-    "typescript": "^5.2.2"
+    "covector": "0.10.2",
+    "esbuild": "0.19.4",
+    "esbuild-plugin-solid": "0.5.0",
+    "prettier": "3.0.3",
+    "tsup": "7.2.0",
+    "typescript": "5.2.2"
   },
   "resolutions": {
     "semver": ">=7.5.2"

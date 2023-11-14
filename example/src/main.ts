@@ -6,8 +6,4 @@ docsearch({
   apiKey: "3eb6db150af1abefe000f00386e149dfb5a006932cab55d1ccd810b8672a4e12",
   indexUid: "docs-v1",
   container: "#docsearch",
-  hotKeys: {
-    ctrlWithKey: 'k',
-    singleKeys: false
-  }
 });

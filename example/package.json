@@ -9,10 +9,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "meilisearch-docsearch": "link:.."
+    "meilisearch-docsearch": "workspace:"
   },
   "devDependencies": {
-    "typescript": "^5.1.5",
-    "vite": "^4.3.9"
+    "typescript": "5.2.2",
+    "vite": "4.3.9"
   }
 }
