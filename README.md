@@ -41,11 +41,6 @@ docsearch({
   host: "YOUR_HOST_URL",
   apiKey: "YOUR_SEARCH_API_KEY",
   indexUid: "YOUR_INDEX_UID",
-  hotKeys: {
-    // set false to disable
-    ctrlWithKey: "k",
-    singleKeys: ["s", "/"],
-  }
 });
 ```
 
