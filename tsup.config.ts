@@ -1,6 +1,6 @@
 import { defineConfig, Options } from "tsup";
 import { solidPlugin } from "esbuild-plugin-solid";
-// @ts-ignore
+// @ts-expect-error node built-in module
 import { readFileSync } from "node:fs";
 
 const VERSION = JSON.parse(readFileSync("package.json", "utf-8")).version;
@@ -13,7 +13,7 @@ export default defineConfig(
         format: ["esm", "cjs"],
         dts: true,
         clean: !config.watch,
-        minify: !config.watch,
+        minify: false,
         esbuildPlugins: [solidPlugin()],
         env: {
           VERSION,
@@ -23,7 +23,7 @@ export default defineConfig(
         entry: ["src/index.tsx"],
         format: ["iife"],
         clean: !config.watch,
-        minify: !config.watch,
+        minify: false,
         esbuildPlugins: [solidPlugin()],
         env: {
           VERSION,
@@ -58,7 +58,7 @@ export default defineConfig(
           "src/styles/modal.css",
         ],
         clean: !config.watch,
-        minify: !config.watch,
+        minify: false,
       },
     ] as Options[],
 );
