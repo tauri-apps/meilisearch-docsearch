@@ -12,7 +12,7 @@
     "meilisearch-docsearch": "workspace:"
   },
   "devDependencies": {
-    "typescript": "5.2.2",
+    "typescript": "5.3.2",
     "vite": "5.0.0"
   }
 }
