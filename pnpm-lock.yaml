@@ -15,8 +15,8 @@ importers:
         specifier: 0.36.0
         version: 0.36.0
       solid-js:
-        specifier: 1.8.5
-        version: 1.8.5
+        specifier: 1.8.6
+        version: 1.8.6
     devDependencies:
       covector:
         specifier: 0.10.2
@@ -26,7 +26,7 @@ importers:
         version: 0.19.7
       esbuild-plugin-solid:
         specifier: 0.5.0
-        version: 0.5.0(esbuild@0.19.7)(solid-js@1.8.5)
+        version: 0.5.0(esbuild@0.19.7)(solid-js@1.8.6)
       prettier:
         specifier: 3.1.0
         version: 3.1.0
@@ -1485,7 +1485,7 @@ packages:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
     dev: true
 
-  /esbuild-plugin-solid@0.5.0(esbuild@0.19.7)(solid-js@1.8.5):
+  /esbuild-plugin-solid@0.5.0(esbuild@0.19.7)(solid-js@1.8.6):
     resolution: {integrity: sha512-ITK6n+0ayGFeDVUZWNMxX+vLsasEN1ILrg4pISsNOQ+mq4ljlJJiuXotInd+HE0MzwTcA9wExT1yzDE2hsqPsg==}
     peerDependencies:
       esbuild: '>=0.12'
@@ -1495,7 +1495,7 @@ packages:
       '@babel/preset-typescript': 7.23.3(@babel/core@7.23.3)
       babel-preset-solid: 1.8.4(@babel/core@7.23.3)
       esbuild: 0.19.7
-      solid-js: 1.8.5
+      solid-js: 1.8.6
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2425,8 +2425,8 @@ packages:
       randombytes: 2.1.0
     dev: true
 
-  /seroval@0.12.3:
-    resolution: {integrity: sha512-5WDeMpv7rmEylsypRj1iwRVHE/QLsMLiZ+9savlNNQEVdgGia1iRMb7qyaAagY0wu/7+QTe6d2wldk/lgaLb6g==}
+  /seroval@0.14.1:
+    resolution: {integrity: sha512-ZlC9y1KVDhZFdEHLYZup1RjKDutyX1tt3ffOauqRbRURa2vRr2NU/bHuVEuNEqR3zE2uCU3WM6LqH6Oinc3tWg==}
     engines: {node: '>=10'}
 
   /shebang-command@2.0.0:
@@ -2454,11 +2454,11 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /solid-js@1.8.5:
-    resolution: {integrity: sha512-xvtJvzJzWbsn35oKFhW9kNwaxG1Z/YLMsDp4tLVcYZTMPzvzQ8vEZuyDQ6nt7xDArVgZJ7TUFrJUwrui/oq53A==}
+  /solid-js@1.8.6:
+    resolution: {integrity: sha512-yiH6ZfBBZ3xj/aU/PBpVKB+8r8WWp100NGF7k/Z0IrK9Y8Lv0jwvFiJY1cHdc6Tj7GqXArKnMBabM0m1k+LzkA==}
     dependencies:
       csstype: 3.1.2
-      seroval: 0.12.3
+      seroval: 0.14.1
 
   /source-map-js@1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
