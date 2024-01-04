@@ -15,8 +15,8 @@ importers:
         specifier: 0.36.0
         version: 0.36.0
       solid-js:
-        specifier: 1.8.7
-        version: 1.8.7
+        specifier: 1.8.8
+        version: 1.8.8
     devDependencies:
       covector:
         specifier: 0.10.2
@@ -26,7 +26,7 @@ importers:
         version: 0.19.11
       esbuild-plugin-solid:
         specifier: 0.5.0
-        version: 0.5.0(esbuild@0.19.11)(solid-js@1.8.7)
+        version: 0.5.0(esbuild@0.19.11)(solid-js@1.8.8)
       prettier:
         specifier: 3.1.1
         version: 3.1.1
@@ -1494,7 +1494,7 @@ packages:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
     dev: true
 
-  /esbuild-plugin-solid@0.5.0(esbuild@0.19.11)(solid-js@1.8.7):
+  /esbuild-plugin-solid@0.5.0(esbuild@0.19.11)(solid-js@1.8.8):
     resolution: {integrity: sha512-ITK6n+0ayGFeDVUZWNMxX+vLsasEN1ILrg4pISsNOQ+mq4ljlJJiuXotInd+HE0MzwTcA9wExT1yzDE2hsqPsg==}
     peerDependencies:
       esbuild: '>=0.12'
@@ -1504,7 +1504,7 @@ packages:
       '@babel/preset-typescript': 7.23.3(@babel/core@7.23.3)
       babel-preset-solid: 1.8.4(@babel/core@7.23.3)
       esbuild: 0.19.11
-      solid-js: 1.8.7
+      solid-js: 1.8.8
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2435,8 +2435,8 @@ packages:
       randombytes: 2.1.0
     dev: true
 
-  /seroval@0.15.1:
-    resolution: {integrity: sha512-OPVtf0qmeC7RW+ScVX+7aOS+xoIM7pWcZ0jOWg2aTZigCydgRB04adfteBRbecZnnrO1WuGQ+C3tLeBBzX2zSQ==}
+  /seroval@1.0.2:
+    resolution: {integrity: sha512-buswWxRzf65ZGUk8MAf3qVtBJHbe5gq6hZyPeqlJCKEIl/tEhUZze0YJg7vB7tFRGgPeneRaP083OB/vDiYLvA==}
     engines: {node: '>=10'}
 
   /shebang-command@2.0.0:
@@ -2464,11 +2464,11 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /solid-js@1.8.7:
-    resolution: {integrity: sha512-9dzrSVieh2zj3SnJ02II6xZkonR6c+j/91b7XZUNcC6xSaldlqjjGh98F1fk5cRJ8ZTkzqF5fPIWDxEOs6QZXA==}
+  /solid-js@1.8.8:
+    resolution: {integrity: sha512-9CtL5xWTYX1WWjQKqht3Tl0AJzgz4YWVQk8hoscO9TzRCgzlpAauEOexXa6bPG30W+fWLnFVE7XUiAzQFNeUKw==}
     dependencies:
       csstype: 3.1.2
-      seroval: 0.15.1
+      seroval: 1.0.2
 
   /source-map-js@1.0.2:
     resolution: {integrity: sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==}
