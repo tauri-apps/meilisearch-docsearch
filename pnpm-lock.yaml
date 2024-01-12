@@ -28,8 +28,8 @@ importers:
         specifier: 0.5.0
         version: 0.5.0(esbuild@0.19.11)(solid-js@1.8.10)
       prettier:
-        specifier: 3.2.0
-        version: 3.2.0
+        specifier: 3.2.1
+        version: 3.2.1
       tsup:
         specifier: 8.0.1
         version: 8.0.1(typescript@5.3.3)
@@ -2062,8 +2062,8 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /prettier@3.2.0:
-    resolution: {integrity: sha512-/vBUecTGaPlRVwyZVROVC58bYIScqaoEJzZmzQXXrZOzqn0TwWz0EnOozOlFO/YAImRnb7XsKpTCd3m1SjS2Ww==}
+  /prettier@3.2.1:
+    resolution: {integrity: sha512-qSUWshj1IobVbKc226Gw2pync27t0Kf0EdufZa9j7uBSJay1CC+B3K5lAAZoqgX3ASiKuWsk6OmzKRetXNObWg==}
     engines: {node: '>=14'}
     hasBin: true
     dev: true
