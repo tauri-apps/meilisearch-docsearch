@@ -15,8 +15,8 @@ importers:
         specifier: 0.37.0
         version: 0.37.0
       solid-js:
-        specifier: 1.8.11
-        version: 1.8.11
+        specifier: 1.8.12
+        version: 1.8.12
     devDependencies:
       covector:
         specifier: 0.10.2
@@ -26,7 +26,7 @@ importers:
         version: 0.19.11
       esbuild-plugin-solid:
         specifier: 0.5.0
-        version: 0.5.0(esbuild@0.19.11)(solid-js@1.8.11)
+        version: 0.5.0(esbuild@0.19.11)(solid-js@1.8.12)
       prettier:
         specifier: 3.2.4
         version: 3.2.4
@@ -1296,7 +1296,7 @@ packages:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
     dev: true
 
-  /esbuild-plugin-solid@0.5.0(esbuild@0.19.11)(solid-js@1.8.11):
+  /esbuild-plugin-solid@0.5.0(esbuild@0.19.11)(solid-js@1.8.12):
     resolution: {integrity: sha512-ITK6n+0ayGFeDVUZWNMxX+vLsasEN1ILrg4pISsNOQ+mq4ljlJJiuXotInd+HE0MzwTcA9wExT1yzDE2hsqPsg==}
     peerDependencies:
       esbuild: '>=0.12'
@@ -1306,7 +1306,7 @@ packages:
       '@babel/preset-typescript': 7.23.3(@babel/core@7.23.3)
       babel-preset-solid: 1.8.4(@babel/core@7.23.3)
       esbuild: 0.19.11
-      solid-js: 1.8.11
+      solid-js: 1.8.12
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -2244,8 +2244,8 @@ packages:
     engines: {node: '>=8'}
     dev: true
 
-  /solid-js@1.8.11:
-    resolution: {integrity: sha512-WdwmER+TwBJiN4rVQTVBxocg+9pKlOs41KzPYntrC86xO5sek8TzBYozPEZPL1IRWDouf2lMrvSbIs3CanlPvQ==}
+  /solid-js@1.8.12:
+    resolution: {integrity: sha512-sLE/i6M9FSWlov3a2pTC5ISzanH2aKwqXTZj+bbFt4SUrVb4iGEa7fpILBMOxsQjkv3eXqEk6JVLlogOdTe0UQ==}
     dependencies:
       csstype: 3.1.2
       seroval: 1.0.3
