@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "meilisearch": "0.37.0",
-    "solid-js": "1.8.14"
+    "solid-js": "1.8.15"
   },
   "devDependencies": {
     "covector": "0.10.2",
