@@ -15,8 +15,8 @@ importers:
         specifier: 0.38.0
         version: 0.38.0
       solid-js:
-        specifier: 1.8.16
-        version: 1.8.16
+        specifier: 1.8.17
+        version: 1.8.17
     devDependencies:
       covector:
         specifier: 0.10.2
@@ -26,7 +26,7 @@ importers:
         version: 0.20.2
       esbuild-plugin-solid:
         specifier: 0.5.0
-        version: 0.5.0(esbuild@0.20.2)(solid-js@1.8.16)
+        version: 0.5.0(esbuild@0.20.2)(solid-js@1.8.17)
       prettier:
         specifier: 3.2.5
         version: 3.2.5
@@ -1472,8 +1472,8 @@ packages:
     resolution: {integrity: sha512-g9Q1haeby36OSStwb4ntCGGGaKsaVSjQ68fBxoQcutl5fS1vuY18H3wSt3jFyFtrkx+Kz0V1G85A4MyAdDMi2Q==}
     engines: {node: '>=8'}
 
-  solid-js@1.8.16:
-    resolution: {integrity: sha512-rja94MNU9flF3qQRLNsu60QHKBDKBkVE1DldJZPIfn2ypIn3NV2WpSbGTQIvsyGPBo+9E2IMjwqnqpbgfWuzeg==}
+  solid-js@1.8.17:
+    resolution: {integrity: sha512-E0FkUgv9sG/gEBWkHr/2XkBluHb1fkrHywUgA6o6XolPDCJ4g1HaLmQufcBBhiF36ee40q+HpG/vCZu7fLpI3Q==}
 
   source-map-js@1.2.0:
     resolution: {integrity: sha512-itJW8lvSA0TXEphiRoawsCksnlf8SyvmFzIhltqAHluXd88pkCd+cXJVHTDwdCr0IzwptSm035IHQktUu1QUMg==}
@@ -2546,13 +2546,13 @@ snapshots:
 
   emoji-regex@8.0.0: {}
 
-  esbuild-plugin-solid@0.5.0(esbuild@0.20.2)(solid-js@1.8.16):
+  esbuild-plugin-solid@0.5.0(esbuild@0.20.2)(solid-js@1.8.17):
     dependencies:
       '@babel/core': 7.23.3
       '@babel/preset-typescript': 7.23.3(@babel/core@7.23.3)
       babel-preset-solid: 1.8.4(@babel/core@7.23.3)
       esbuild: 0.20.2
-      solid-js: 1.8.16
+      solid-js: 1.8.17
     transitivePeerDependencies:
       - supports-color
 
@@ -3142,7 +3142,7 @@ snapshots:
 
   slash@3.0.0: {}
 
-  solid-js@1.8.16:
+  solid-js@1.8.17:
     dependencies:
       csstype: 3.1.2
       seroval: 1.0.5
