@@ -25,8 +25,8 @@ importers:
         specifier: 0.20.2
         version: 0.20.2
       esbuild-plugin-solid:
-        specifier: 0.5.0
-        version: 0.5.0(esbuild@0.20.2)(solid-js@1.8.17)
+        specifier: 0.6.0
+        version: 0.6.0(esbuild@0.20.2)(solid-js@1.8.17)
       prettier:
         specifier: 3.2.5
         version: 3.2.5
@@ -924,10 +924,10 @@ packages:
   emoji-regex@8.0.0:
     resolution: {integrity: sha512-MSjYzcWNOA0ewAHpz0MxpYFvwg6yjy1NG3xteoqz644VCo/RPgnr1/GGt+ic3iJTzQ8Eu3TdM14SawnVUmGE6A==}
 
-  esbuild-plugin-solid@0.5.0:
-    resolution: {integrity: sha512-ITK6n+0ayGFeDVUZWNMxX+vLsasEN1ILrg4pISsNOQ+mq4ljlJJiuXotInd+HE0MzwTcA9wExT1yzDE2hsqPsg==}
+  esbuild-plugin-solid@0.6.0:
+    resolution: {integrity: sha512-V1FvDALwLDX6K0XNYM9CMRAnMzA0+Ecu55qBUT9q/eAJh1KIDsTMFoOzMSgyHqbOfvrVfO3Mws3z7TW2GVnIZA==}
     peerDependencies:
-      esbuild: '>=0.12'
+      esbuild: '>=0.20'
       solid-js: '>= 1.0'
 
   esbuild@0.19.12:
@@ -2546,7 +2546,7 @@ snapshots:
 
   emoji-regex@8.0.0: {}
 
-  esbuild-plugin-solid@0.5.0(esbuild@0.20.2)(solid-js@1.8.17):
+  esbuild-plugin-solid@0.6.0(esbuild@0.20.2)(solid-js@1.8.17):
     dependencies:
       '@babel/core': 7.23.3
       '@babel/preset-typescript': 7.23.3(@babel/core@7.23.3)
