@@ -12,8 +12,8 @@ importers:
   .:
     dependencies:
       meilisearch:
-        specifier: 0.38.0
-        version: 0.38.0
+        specifier: 0.39.0
+        version: 0.39.0
       solid-js:
         specifier: 1.8.17
         version: 1.8.17
@@ -1198,8 +1198,8 @@ packages:
   mdast-util-to-string@2.0.0:
     resolution: {integrity: sha512-AW4DRS3QbBayY/jJmD8437V1Gombjf8RSOUCMFBuo5iHi58AGEgVCKQ+ezHkZZDpAQS75hcBMpLqjpJTjtUL7w==}
 
-  meilisearch@0.38.0:
-    resolution: {integrity: sha512-bHaq8nYxSKw9/Qslq1Zes5g9tHgFkxy/I9o8942wv2PqlNOT0CzptIkh/x98N52GikoSZOXSQkgt6oMjtf5uZw==}
+  meilisearch@0.39.0:
+    resolution: {integrity: sha512-nNf/HOqQ/wSxaSYKyIsE8thMPciLyIpEDIp0ZbJxkOZ/tETDNfaBNbY+Eq/wbTR9O769QSiQFf5OhssfGyOzbA==}
 
   merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
@@ -2859,7 +2859,7 @@ snapshots:
 
   mdast-util-to-string@2.0.0: {}
 
-  meilisearch@0.38.0:
+  meilisearch@0.39.0:
     dependencies:
       cross-fetch: 3.1.8
     transitivePeerDependencies:
