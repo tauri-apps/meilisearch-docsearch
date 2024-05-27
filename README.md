@@ -33,7 +33,7 @@ Then, insert `DocSearch` into it by calling the `docsearch` function and providi
 Make sure to provide a `container` (for example, a `div`), not an `input`. `DocSearch` generates a fully accessible search box for you.
 
 ```js
-import { docsearch } from "meilisearch-docsearch/js";
+import { docsearch } from "meilisearch-docsearch";
 import "meilisearch-docsearch/css";
 
 docsearch({
