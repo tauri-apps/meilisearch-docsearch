@@ -47,8 +47,8 @@ importers:
         specifier: 5.4.5
         version: 5.4.5
       vite:
-        specifier: 5.2.11
-        version: 5.2.11
+        specifier: 5.2.12
+        version: 5.2.12
 
 packages:
 
@@ -1763,8 +1763,8 @@ packages:
   vfile@4.2.1:
     resolution: {integrity: sha512-O6AE4OskCG5S1emQ/4gl8zK586RqA3srz3nfK/Viy0UPToBc5Trp9BVFb1u0CjsKrAWwnpr4ifM/KBXPWwJbCA==}
 
-  vite@5.2.11:
-    resolution: {integrity: sha512-HndV31LWW05i1BLPMUCE1B9E9GFbOu1MbenhS58FuK6owSO5qHm7GiCotrNY1YE5rMeQSFBGmT5ZaLEjFizgiQ==}
+  vite@5.2.12:
+    resolution: {integrity: sha512-/gC8GxzxMK5ntBwb48pR32GGhENnjtY30G4A0jemunsBkiEZFw60s8InGpN8gkhHEkjnRK1aSAxeQgwvFhUHAA==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
     peerDependencies:
@@ -2096,9 +2096,9 @@ snapshots:
       - encoding
       - mocha
 
-  '@covector/assemble@0.11.0(mocha@10.2.0)':
+  '@covector/assemble@0.11.0':
     dependencies:
-      '@covector/command': 0.7.1(mocha@10.2.0)
+      '@covector/command': 0.7.1
       '@covector/files': 0.7.2
       effection: 2.0.8(mocha@10.2.0)
       js-yaml: 4.1.0
@@ -2109,10 +2109,9 @@ snapshots:
       unified: 9.2.2
     transitivePeerDependencies:
       - encoding
-      - mocha
       - supports-color
 
-  '@covector/changelog@0.11.0(mocha@10.2.0)':
+  '@covector/changelog@0.11.0':
     dependencies:
       '@covector/files': 0.7.2
       effection: 2.0.8(mocha@10.2.0)
@@ -2122,16 +2121,14 @@ snapshots:
       unified: 9.2.2
     transitivePeerDependencies:
       - encoding
-      - mocha
       - supports-color
 
-  '@covector/command@0.7.1(mocha@10.2.0)':
+  '@covector/command@0.7.1':
     dependencies:
       '@effection/process': 2.1.4
       effection: 2.0.8(mocha@10.2.0)
     transitivePeerDependencies:
       - encoding
-      - mocha
 
   '@covector/files@0.7.2':
     dependencies:
@@ -2178,6 +2175,8 @@ snapshots:
     dependencies:
       effection: 2.0.8(mocha@10.2.0)
       mocha: 10.2.0
+    transitivePeerDependencies:
+      - encoding
 
   '@effection/process@2.1.4':
     dependencies:
@@ -2185,6 +2184,8 @@ snapshots:
       ctrlc-windows: 2.1.0
       effection: 2.0.8(mocha@10.2.0)
       shellwords: 0.1.1
+    transitivePeerDependencies:
+      - encoding
 
   '@effection/stream@2.0.6':
     dependencies:
@@ -2681,9 +2682,9 @@ snapshots:
   covector@0.11.0(mocha@10.2.0):
     dependencies:
       '@covector/apply': 0.9.3(mocha@10.2.0)
-      '@covector/assemble': 0.11.0(mocha@10.2.0)
-      '@covector/changelog': 0.11.0(mocha@10.2.0)
-      '@covector/command': 0.7.1(mocha@10.2.0)
+      '@covector/assemble': 0.11.0
+      '@covector/changelog': 0.11.0
+      '@covector/command': 0.7.1
       '@covector/files': 0.7.2
       effection: 2.0.8(mocha@10.2.0)
       globby: 11.1.0
@@ -3530,7 +3531,7 @@ snapshots:
       unist-util-stringify-position: 2.0.3
       vfile-message: 2.0.4
 
-  vite@5.2.11:
+  vite@5.2.12:
     dependencies:
       esbuild: 0.20.2
       postcss: 8.4.38
