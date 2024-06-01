@@ -28,8 +28,8 @@ importers:
         specifier: 0.6.0
         version: 0.6.0(esbuild@0.21.4)(solid-js@1.8.17)
       prettier:
-        specifier: 3.2.5
-        version: 3.2.5
+        specifier: 3.3.0
+        version: 3.3.0
       tsup:
         specifier: 8.0.2
         version: 8.0.2(postcss@8.4.38)(typescript@5.4.5)
@@ -1501,8 +1501,8 @@ packages:
     resolution: {integrity: sha512-Wglpdk03BSfXkHoQa3b/oulrotAkwrlLDRSOb9D0bN86FdRyE9lppSp33aHNPgBa0JKCoB+drFLZkQoRRYae5A==}
     engines: {node: ^10 || ^12 || >=14}
 
-  prettier@3.2.5:
-    resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
+  prettier@3.3.0:
+    resolution: {integrity: sha512-J9odKxERhCQ10OC2yb93583f6UnYutOeiV5i0zEDS7UGTdUt0u+y8erxl3lBKvwo/JHyyoEdXjwp4dke9oyZ/g==}
     engines: {node: '>=14'}
     hasBin: true
 
@@ -2096,9 +2096,9 @@ snapshots:
       - encoding
       - mocha
 
-  '@covector/assemble@0.11.0':
+  '@covector/assemble@0.11.0(mocha@10.2.0)':
     dependencies:
-      '@covector/command': 0.7.1
+      '@covector/command': 0.7.1(mocha@10.2.0)
       '@covector/files': 0.7.2
       effection: 2.0.8(mocha@10.2.0)
       js-yaml: 4.1.0
@@ -2109,9 +2109,10 @@ snapshots:
       unified: 9.2.2
     transitivePeerDependencies:
       - encoding
+      - mocha
       - supports-color
 
-  '@covector/changelog@0.11.0':
+  '@covector/changelog@0.11.0(mocha@10.2.0)':
     dependencies:
       '@covector/files': 0.7.2
       effection: 2.0.8(mocha@10.2.0)
@@ -2121,14 +2122,16 @@ snapshots:
       unified: 9.2.2
     transitivePeerDependencies:
       - encoding
+      - mocha
       - supports-color
 
-  '@covector/command@0.7.1':
+  '@covector/command@0.7.1(mocha@10.2.0)':
     dependencies:
-      '@effection/process': 2.1.4
+      '@effection/process': 2.1.4(mocha@10.2.0)
       effection: 2.0.8(mocha@10.2.0)
     transitivePeerDependencies:
       - encoding
+      - mocha
 
   '@covector/files@0.7.2':
     dependencies:
@@ -2175,10 +2178,8 @@ snapshots:
     dependencies:
       effection: 2.0.8(mocha@10.2.0)
       mocha: 10.2.0
-    transitivePeerDependencies:
-      - encoding
 
-  '@effection/process@2.1.4':
+  '@effection/process@2.1.4(mocha@10.2.0)':
     dependencies:
       cross-spawn: 7.0.3
       ctrlc-windows: 2.1.0
@@ -2186,6 +2187,7 @@ snapshots:
       shellwords: 0.1.1
     transitivePeerDependencies:
       - encoding
+      - mocha
 
   '@effection/stream@2.0.6':
     dependencies:
@@ -2682,9 +2684,9 @@ snapshots:
   covector@0.11.0(mocha@10.2.0):
     dependencies:
       '@covector/apply': 0.9.3(mocha@10.2.0)
-      '@covector/assemble': 0.11.0
-      '@covector/changelog': 0.11.0
-      '@covector/command': 0.7.1
+      '@covector/assemble': 0.11.0(mocha@10.2.0)
+      '@covector/changelog': 0.11.0(mocha@10.2.0)
+      '@covector/command': 0.7.1(mocha@10.2.0)
       '@covector/files': 0.7.2
       effection: 2.0.8(mocha@10.2.0)
       globby: 11.1.0
@@ -3253,7 +3255,7 @@ snapshots:
       picocolors: 1.0.0
       source-map-js: 1.2.0
 
-  prettier@3.2.5: {}
+  prettier@3.3.0: {}
 
   punycode@2.3.1: {}
 
