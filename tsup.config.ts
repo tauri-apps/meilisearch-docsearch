@@ -8,6 +8,7 @@ const VERSION = JSON.parse(readFileSync("package.json", "utf-8")).version;
 export default defineConfig(
   (config) =>
     [
+      // ESM and CJS builds published to NPM
       {
         entry: ["src/index.tsx"],
         format: ["esm", "cjs"],
@@ -19,21 +20,8 @@ export default defineConfig(
           VERSION,
         },
       },
-      {
-        entry: ["src/index.tsx"],
-        format: ["iife"],
-        clean: !config.watch,
-        minify: false,
-        esbuildPlugins: [solidPlugin()],
-        env: {
-          VERSION,
-        },
-        globalName: "__docsearch_meilisearch__",
-        platform: "browser",
-        footer: {
-          js: "if (!'__docsearch_meilisearch__' in window) window.__docsearch_meilisearch__ = __docsearch_meilisearch__",
-        },
-      },
+
+      // Solid-JS builds published to NPM
       {
         entry: ["src/index.solid.tsx"],
         format: "esm",
@@ -50,6 +38,43 @@ export default defineConfig(
           VERSION,
         },
       },
+
+      // Global window object bundled
+      {
+        entry: ["src/index.tsx"],
+        format: ["iife"],
+        noExternal: [/(.*)/],
+        clean: !config.watch,
+        minify: true,
+        esbuildPlugins: [solidPlugin()],
+        env: {
+          VERSION,
+        },
+        globalName: "__docsearch_meilisearch__",
+        platform: "browser",
+        footer: {
+          js: "if (!'__docsearch_meilisearch__' in window) window.__docsearch_meilisearch__ = __docsearch_meilisearch__",
+        },
+      },
+
+      // ESM bundled
+      {
+        entry: ["src/index.tsx"],
+        format: ["esm"],
+        clean: !config.watch,
+        minify: true,
+        esbuildPlugins: [solidPlugin()],
+        noExternal: [/(.*)/],
+        outExtension: () => ({
+          js: ".bundled.esm.js",
+        }),
+        env: {
+          VERSION,
+        },
+        platform: "browser",
+      },
+
+      // CSS
       {
         entry: [
           "src/styles/index.css",

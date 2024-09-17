@@ -109,6 +109,20 @@ The package also contains a browser bundle and the necessary styles that could b
    </script>
    ```
 
+   alternatively you can import the ESM module when using `<script type="module">`
+
+   ```html
+   <script type="module" async>
+     import { docsearch } from "https://unpkg.com/meilisearch-docsearch@latest/dist/index.bundled.esm.js";
+     docsearch({
+       container: "#docsearch",
+       host: "YOUR_HOST_URL",
+       apiKey: "YOUR_SEARCH_API_KEY",
+       indexUid: "YOUR_INDEX_UID",
+     });
+   </script>
+   ```
+
 3. import styles
 
    ```html
