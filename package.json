@@ -1,6 +1,6 @@
 {
   "name": "meilisearch-docsearch",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "A quick search component for meilisearch, inspired by algolia/docsearch.",
   "license": "MIT or Apache-2.0",
   "files": [

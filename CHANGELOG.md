@@ -1,5 +1,9 @@
 # Changelog
 
+## \[0.6.1]
+
+- [`a20acbc`](https://github.com/tauri-apps/meilisearch-docsearch/commit/a20acbc1987c34a981652e572dd994fd905a1df2) Publish `index.bundled.esm.js` file which is an ESM bundled verion of the package.
+
 ## \[0.6.0]
 
 - [`5d69f23`](https://github.com/tauri-apps/meilisearch-docsearch/commit/5d69f23ce32b40710460b1b23b4917ade00131e8)([#44](https://github.com/tauri-apps/meilisearch-docsearch/pull/44)) Add the options to define custom hotkeys or disable the default ones.
