@@ -14,14 +14,12 @@
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
-      "require": "./dist/index.cjs",
-      "default": "./dist/index.js"
+      "require": "./dist/index.cjs"
     },
     "./solid": {
       "types": "./dist/index.solid.d.ts",
       "import": "./dist/index.solid.jsx",
-      "require": "./dist/index.solid.jsx",
-      "default": "./dist/index.solid.jsx"
+      "require": "./dist/index.solid.jsx"
     },
     "./css": "./dist/index.css",
     "./css/variables": "./dist/variables.css",
@@ -37,16 +35,15 @@
     "format:check": "prettier --check \"./**/*.{js,jsx,ts,tsx,json,html,css}\" --ignore-path .gitignore"
   },
   "dependencies": {
-    "meilisearch": "0.40.0",
-    "solid-js": "1.8.17"
+    "meilisearch": "0.42.0",
+    "solid-js": "1.8.22"
   },
   "devDependencies": {
-    "covector": "0.11.0",
-    "esbuild": "0.21.5",
+    "esbuild": "0.23.1",
     "esbuild-plugin-solid": "0.6.0",
-    "prettier": "3.3.2",
-    "tsup": "8.1.0",
-    "typescript": "5.5.2"
+    "prettier": "3.3.3",
+    "tsup": "8.2.4",
+    "typescript": "5.6.2"
   },
   "resolutions": {
     "semver": ">=7.5.2"
