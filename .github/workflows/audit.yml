@@ -27,16 +27,9 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: pnpm/action-setup@v2.2.2
+      - uses: actions/checkout@v4
+      - run: corepack enable
+      - uses: actions/setup-node@v4
         with:
-          version: 8
-      - name: Setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          check-latest: true
-          cache: "pnpm"
-          cache-dependency-path: "**/pnpm-lock.yaml"
-      - run: pnpm install
+          node-version: 'lts/*'
       - run: pnpm audit

@@ -13,25 +13,26 @@ jobs:
   version-or-publish:
     runs-on: ubuntu-latest
     timeout-minutes: 65
+    permissions:
+      actions: write # required for workflow_dispatch
+      contents: write # required to create new releases
+      pull-requests: write # required to open version update pr
+      id-token: write # pnpm provenance
     outputs:
       change: ${{ steps.covector.outputs.change }}
       commandRan: ${{ steps.covector.outputs.commandRan }}
       successfulPublish: ${{ steps.covector.outputs.successfulPublish }}
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - uses: pnpm/action-setup@v2.2.2
+      - run: corepack enable
+      - uses: actions/setup-node@v4
         with:
-          version: 8
-      - name: Setup node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 16
-          check-latest: true
-          registry-url: "https://registry.npmjs.org"
+          node-version: 20
+          registry-url: 'https://registry.npmjs.org'
+          cache: 'pnpm'
 
       - name: covector version or publish (publish when no change files present)
         uses: jbolda/covector/packages/action@covector-v0
