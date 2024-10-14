@@ -1,5 +1,9 @@
 # Changelog
 
+## \[0.7.0]
+
+- [`549a4d8`](https://github.com/tauri-apps/meilisearch-docsearch/commit/549a4d852c7615c81b255bacc72cff51168775d0) ([#165](https://github.com/tauri-apps/meilisearch-docsearch/pull/165) by [@amrbashir](https://github.com/tauri-apps/meilisearch-docsearch/../../amrbashir)) Add `debounceDuration` option to set debouce duration or disable it.
+
 ## \[0.6.1]
 
 - [`a20acbc`](https://github.com/tauri-apps/meilisearch-docsearch/commit/a20acbc1987c34a981652e572dd994fd905a1df2) Publish `index.bundled.esm.js` file which is an ESM bundled verion of the package.
