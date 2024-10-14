@@ -26,6 +26,19 @@ export interface DocSearchProps {
   translations?: DocSearchTranslations;
   searchParams?: SearchParams;
   environment?: typeof window;
+  /**
+   * Duration to wait between keystores to determine whether a search should happen or not.
+   * Defaults to `200`.
+   *
+   * Set to `false` to disable debouncing.
+   *
+   * This is an optimization that discards unnecessary search operations, for example,
+   * if a user is typing `hello`, we skip search operations for `h`, `he`, `hel` and `hell`
+   * as this usually not what the user wants to search for, and instead wait a few milliseconds until
+   * the user stops typing for a brief moment, and then we do the search operation.
+   * In the previous example, that would be `hello`.
+   */
+  debounceDuration?: number | false;
 }
 
 export type DocSearchTranslations = Partial<{

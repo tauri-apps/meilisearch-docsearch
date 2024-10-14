@@ -62,6 +62,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
   clientAgents,
   searchParams,
   environment = window,
+  debounceDuration = 200,
   translations = {},
   onClose,
   initialQuery,
@@ -200,7 +201,10 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
         setHitsCategories(catgeories);
       });
   }
-  const debouncedSearch = utils.debounce(search, 100);
+
+  const debouncedSearch = !debounceDuration
+    ? search
+    : utils.debounce(search, debounceDuration);
 
   if (initialQuery) {
     onMount(() => {
