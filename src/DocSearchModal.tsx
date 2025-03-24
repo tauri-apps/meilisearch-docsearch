@@ -321,6 +321,12 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
                             <a
                               href={hit.url || "#"}
                               aria-label={linkToTheResultAriaLabel}
+                              onclick={(e) => {
+                                // close the modal
+                                if (!e.shiftKey && !e.ctrlKey && !e.metaKey) {
+                                  onClose && onClose();
+                                }
+                              }}
                             >
                               <span class="docsearch-modal-search-hits-item-text-container">
                                 <p
