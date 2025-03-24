@@ -35,15 +35,15 @@
     "format:check": "prettier --check \"./**/*.{js,jsx,ts,tsx,json,html,css}\" --ignore-path .gitignore"
   },
   "dependencies": {
-    "meilisearch": "0.42.0",
-    "solid-js": "1.9.1"
+    "meilisearch": "0.49.0",
+    "solid-js": "1.9.5"
   },
   "devDependencies": {
-    "esbuild": "0.24.0",
+    "esbuild": "0.25.1",
     "esbuild-plugin-solid": "0.6.0",
-    "prettier": "3.3.3",
-    "tsup": "8.3.0",
-    "typescript": "5.6.2"
+    "prettier": "3.5.3",
+    "tsup": "8.4.0",
+    "typescript": "5.8.2"
   },
   "resolutions": {
     "semver": ">=7.5.2"
