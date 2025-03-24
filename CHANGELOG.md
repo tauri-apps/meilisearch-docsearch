@@ -1,5 +1,11 @@
 # Changelog
 
+## \[0.7.1]
+
+- [`b03fb94`](https://github.com/tauri-apps/meilisearch-docsearch/commit/b03fb9484cd39fa5a684bf912ed4b05384ce0793) Close modal when navigating in the same page.
+- [`155171a`](https://github.com/tauri-apps/meilisearch-docsearch/commit/155171a5a29d4780dd0261c5d2b888c992d1d6a6) Fix error when pressing <kdb>Enter</kdb> when there is no results.
+- [`ce30ebe`](https://github.com/tauri-apps/meilisearch-docsearch/commit/ce30ebec67a90c5b755464e74d3e70c194194fce) ([#178](https://github.com/tauri-apps/meilisearch-docsearch/pull/178)) Fix <kbd>Command</kbd>+<kbd>k</kbd> not working on macOS devices.
+
 ## \[0.7.0]
 
 - [`549a4d8`](https://github.com/tauri-apps/meilisearch-docsearch/commit/549a4d852c7615c81b255bacc72cff51168775d0) ([#165](https://github.com/tauri-apps/meilisearch-docsearch/pull/165) by [@amrbashir](https://github.com/tauri-apps/meilisearch-docsearch/../../amrbashir)) Add `debounceDuration` option to set debouce duration or disable it.
