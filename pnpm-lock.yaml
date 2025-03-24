@@ -15,15 +15,15 @@ importers:
         specifier: 0.49.0
         version: 0.49.0
       solid-js:
-        specifier: 1.9.4
-        version: 1.9.4
+        specifier: 1.9.5
+        version: 1.9.5
     devDependencies:
       esbuild:
         specifier: 0.25.0
         version: 0.25.0
       esbuild-plugin-solid:
         specifier: 0.6.0
-        version: 0.6.0(esbuild@0.25.0)(solid-js@1.9.4)
+        version: 0.6.0(esbuild@0.25.0)(solid-js@1.9.5)
       prettier:
         specifier: 3.3.3
         version: 3.3.3
@@ -1192,8 +1192,8 @@ packages:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
 
-  solid-js@1.9.4:
-    resolution: {integrity: sha512-ipQl8FJ31bFUoBNScDQTG3BjN6+9Rg+Q+f10bUbnO6EOTTf5NGerJeHc7wyu5I4RMHEl/WwZwUmy/PTRgxxZ8g==}
+  solid-js@1.9.5:
+    resolution: {integrity: sha512-ogI3DaFcyn6UhYhrgcyRAMbu/buBJitYQASZz5WzfQVPP10RD2AbCoRZ517psnezrasyCbWzIxZ6kVqet768xw==}
 
   source-map-js@1.2.1:
     resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
@@ -1976,13 +1976,13 @@ snapshots:
 
   emoji-regex@9.2.2: {}
 
-  esbuild-plugin-solid@0.6.0(esbuild@0.25.0)(solid-js@1.9.4):
+  esbuild-plugin-solid@0.6.0(esbuild@0.25.0)(solid-js@1.9.5):
     dependencies:
       '@babel/core': 7.23.3
       '@babel/preset-typescript': 7.23.3(@babel/core@7.23.3)
       babel-preset-solid: 1.8.4(@babel/core@7.23.3)
       esbuild: 0.25.0
-      solid-js: 1.9.4
+      solid-js: 1.9.5
     transitivePeerDependencies:
       - supports-color
 
@@ -2293,7 +2293,7 @@ snapshots:
 
   signal-exit@4.1.0: {}
 
-  solid-js@1.9.4:
+  solid-js@1.9.5:
     dependencies:
       csstype: 3.1.2
       seroval: 1.1.1
