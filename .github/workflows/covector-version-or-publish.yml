@@ -33,7 +33,6 @@ jobs:
         with:
           node-version: 20
           registry-url: 'https://registry.npmjs.org'
-          cache: 'pnpm'
 
       - name: covector version or publish (publish when no change files present)
         uses: jbolda/covector/packages/action@covector-v0
