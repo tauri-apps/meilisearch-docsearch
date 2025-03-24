@@ -107,6 +107,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
       target: Element;
     },
   ) {
+    // select previous/next item
     if (e.key === "ArrowUp" || e.key === "ArrowDown") {
       e.preventDefault();
       const down = e.key === "ArrowDown";
@@ -129,26 +130,29 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
         });
     }
 
+    // open the selected item
     if (e.key === "Enter") {
       e.preventDefault();
 
+      if (hits().length === 0) return;
+
+      const url = hits()[activeItemIndex()].url;
+
+      if (!url) return;
+
+      // if ctrl key is pressed, open the result in a new tab and focus it
       if (e.ctrlKey || e.metaKey) {
-        const windowRef = environment.open(
-          hits()[activeItemIndex()].url ?? "",
-          "_blank",
-          "noopener",
-        );
+        const windowRef = environment.open(url, "_blank", "noopener");
         windowRef?.focus();
       } else if (e.shiftKey) {
-        environment.open(
-          hits()[activeItemIndex()].url ?? "",
-          "_blank",
-          "noopener",
-        );
+        // else if shift key is pressed, open the result in a new window
+        environment.open(url, "_blank", "noopener");
       } else {
-        environment.location.assign(hits()[activeItemIndex()].url ?? "");
+        // else open the result in the same window
+        environment.location.assign(url);
       }
 
+      // close the modal
       if (!e.shiftKey && !e.ctrlKey && !e.metaKey) {
         onClose && onClose();
       }
