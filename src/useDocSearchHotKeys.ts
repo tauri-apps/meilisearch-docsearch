@@ -58,8 +58,9 @@ export function useDocSearchHotKeys({
             modsAndkeys.some(isCtrl);
           const shift = event.shiftKey == modsAndkeys.includes("shift");
           const alt = event.altKey == modsAndkeys.some(isAlt);
-          const meta =
-            !isAppleDevice() && event.metaKey == modsAndkeys.some(isMeta);
+          const meta = isAppleDevice()
+            ? true
+            : event.metaKey == modsAndkeys.some(isMeta);
 
           return ctrl && shift && alt && meta;
         }
