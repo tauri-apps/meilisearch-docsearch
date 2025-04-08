@@ -28,6 +28,7 @@ export default defineConfig(
         dts: true,
         clean: !config.watch,
         minify: false,
+        esbuildPlugins: [solidPlugin()],
         esbuildOptions: () => ({
           jsx: "preserve",
         }),
