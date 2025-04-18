@@ -28,9 +28,9 @@ export default defineConfig(
         dts: true,
         clean: !config.watch,
         minify: false,
-        esbuildOptions: () => ({
-          jsx: "preserve",
-        }),
+        esbuildOptions: (options) => {
+          options.jsx = "preserve";
+        },
         outExtension: () => ({
           js: ".jsx",
         }),
