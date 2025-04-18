@@ -1,5 +1,9 @@
 # Changelog
 
+## \[0.7.2]
+
+- [`7d78677`](https://github.com/tauri-apps/meilisearch-docsearch/commit/7d78677f665a164b4acdc60c30c57c246a2491e8) ([#189](https://github.com/tauri-apps/meilisearch-docsearch/pull/189) by [@mixlette](https://github.com/tauri-apps/meilisearch-docsearch/../../mixlette)) Fix `/solid` import containing reference to `React.createElement`. Now `/solid` import will include untransformed JSX, so you can import it directly in your solid projects as it was intended.
+
 ## \[0.7.1]
 
 - [`b03fb94`](https://github.com/tauri-apps/meilisearch-docsearch/commit/b03fb9484cd39fa5a684bf912ed4b05384ce0793) Close modal when navigating in the same page.
