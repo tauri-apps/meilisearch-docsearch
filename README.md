@@ -1,14 +1,14 @@
 # meilisearch-docsearch
 
-A quick search component for meilisearch, inspired by algolia/docsearch.
+A quick search component for meilisearch, inspired by [`algolia/docsearch`](https://github.com/algolia/docsearch/).
 
-# Screenshots
+## Screenshots
 
 | light                                                                                              | dark                                                                                             |
 | -------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------ |
 | ![light](https://github.com/tauri-apps/meilisearch-docsearch/raw/dev/.github/screenshot-light.png) | ![dark](https://github.com/tauri-apps/meilisearch-docsearch/raw/dev/.github/screenshot-dark.png) |
 
-# Usage through NPM (Recommended)
+## Usage through NPM (Recommended)
 
 ### Installation
 
@@ -63,7 +63,7 @@ All styles are included in the package as:
     import "meilisearch-docsearch/css/modal";
     ```
 
-## SolidJS
+### SolidJS
 
 If you are using `solid-js`, you can import `DocSearch` component directely which generates a fully accessible search box for you.
 
@@ -84,7 +84,7 @@ function App() {
 export default App;
 ```
 
-# Usage through CDN
+## Usage through CDN
 
 The package also contains a browser bundle and the necessary styles that could be pulled through a CDN like unpkg.com:
 
@@ -132,10 +132,10 @@ The package also contains a browser bundle and the necessary styles that could b
    />
    ```
 
-# Acknowledgement
+## Acknowledgement
 
 This project is inspired by [`algolia/docsearch`](https://github.com/algolia/docsearch/) and [`meilisearch/docs-searchbar.js`](https://github.com/meilisearch/docs-searchbar.js/)
 
-# LICENSE
+## LICENSE
 
 MIT or MIT/Apache 2.0 where applicable.
