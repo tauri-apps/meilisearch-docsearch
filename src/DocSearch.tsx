@@ -39,6 +39,7 @@ export interface DocSearchProps {
    * In the previous example, that would be `hello`.
    */
   debounceDuration?: number | false;
+  checkCompositionEvent?: boolean;
 }
 
 export type DocSearchTranslations = Partial<{
