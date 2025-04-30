@@ -1,5 +1,9 @@
 # Changelog
 
+## \[0.8.0]
+
+- [`5563edc`](https://github.com/tauri-apps/meilisearch-docsearch/commit/5563edcc0294dd4f5d12be71dd2a04aed8b373e0) ([#194](https://github.com/tauri-apps/meilisearch-docsearch/pull/194) by [@repeatedly](https://github.com/tauri-apps/meilisearch-docsearch/../../repeatedly)) Add `checkCompositionEvent` option to avoid unexpected input behaviour during IME composition.
+
 ## \[0.7.2]
 
 - [`7d78677`](https://github.com/tauri-apps/meilisearch-docsearch/commit/7d78677f665a164b4acdc60c30c57c246a2491e8) ([#189](https://github.com/tauri-apps/meilisearch-docsearch/pull/189) by [@mixlette](https://github.com/tauri-apps/meilisearch-docsearch/../../mixlette)) Fix `/solid` import containing reference to `React.createElement`. Now `/solid` import will include untransformed JSX, so you can import it directly in your solid projects as it was intended.
