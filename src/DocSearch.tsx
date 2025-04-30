@@ -39,6 +39,14 @@ export interface DocSearchProps {
    * In the previous example, that would be `hello`.
    */
   debounceDuration?: number | false;
+  /**
+   * Check composition event in `onKeyDown` for IME conmposition.
+   * Without this option, Enter for IME compoisiton triggers an unexpected search result selection.
+   * Set to `true` to fix this problem for CJKV and similar IME users.
+   *
+   * The default value is `false` to keep existing behavior.
+   */
+  checkCompositionEvent?: boolean;
 }
 
 export type DocSearchTranslations = Partial<{

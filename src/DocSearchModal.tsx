@@ -63,6 +63,7 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
   searchParams,
   environment = window,
   debounceDuration = 200,
+  checkCompositionEvent = false,
   translations = {},
   onClose,
   initialQuery,
@@ -107,6 +108,12 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
       target: Element;
     },
   ) {
+    // keyCode is deprecated but several documents recommend keyCode for this IME use case
+    // See: https://developer.mozilla.org/en-US/docs/Web/API/Element/keydown_event#keydown_events_with_ime
+    if (checkCompositionEvent && (e.isComposing || e.keyCode === 229)) {
+      return;
+    }
+
     // select previous/next item
     if (e.key === "ArrowUp" || e.key === "ArrowDown") {
       e.preventDefault();
