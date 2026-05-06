@@ -1,5 +1,9 @@
 # Changelog
 
+## \[0.8.1]
+
+- [`496e63e`](https://github.com/tauri-apps/meilisearch-docsearch/commit/496e63eb8e95b891915e6379a86b687cc2274293) ([#209](https://github.com/tauri-apps/meilisearch-docsearch/pull/209) by [@tony140407](https://github.com/tauri-apps/meilisearch-docsearch/../../tony140407)) Use AbortController to cancel outdated search requests, preventing race conditions and reducing unnecessary network usage.
+
 ## \[0.8.0]
 
 - [`5563edc`](https://github.com/tauri-apps/meilisearch-docsearch/commit/5563edcc0294dd4f5d12be71dd2a04aed8b373e0) ([#194](https://github.com/tauri-apps/meilisearch-docsearch/pull/194) by [@repeatedly](https://github.com/tauri-apps/meilisearch-docsearch/../../repeatedly)) Add `checkCompositionEvent` option to avoid unexpected input behaviour during IME composition.
