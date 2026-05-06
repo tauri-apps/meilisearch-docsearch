@@ -102,6 +102,14 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
   );
   const numberOfHits = () => hits().length;
 
+  // AbortController for cancelling previous search requests
+  let abortController: AbortController | null = null;
+
+  // Cancel ongoing requests when component unmounts
+  onCleanup(() => {
+    abortController?.abort();
+  });
+
   function onKeyDown(
     e: KeyboardEvent & {
       currentTarget: HTMLInputElement;
@@ -166,39 +174,66 @@ export const DocSearchModal: Component<DocSearchModalProps> = ({
     }
   }
 
-  function onReset() {
+  function resetState(screenState: ScreenState = ScreenState.EmptyQuery) {
     setLoading(false);
-    setScreenState(ScreenState.EmptyQuery);
+    setScreenState(screenState);
     setHits([]);
     setHitsCategories([]);
     setActiveItemIndex(0);
   }
 
+  function onReset() {
+    abortController?.abort();
+    abortController = null;
+    resetState();
+  }
+
   function search(query: string) {
+    if (abortController) abortController.abort();
+
+    abortController = new AbortController();
+    const currentController = abortController;
+
     setLoading(true);
     searchClient()
       .index(indexUid)
-      .search(query, {
-        attributesToHighlight: ["*"],
-        attributesToCrop: [`content`],
-        cropLength: 30,
-        ...searchParams,
-      })
+      .search(
+        query,
+        {
+          attributesToHighlight: ["*"],
+          attributesToCrop: [`content`],
+          cropLength: 30,
+          ...searchParams,
+        },
+        {
+          signal: abortController.signal,
+        },
+      )
       .catch((e) => {
-        onReset();
-        setScreenState(ScreenState.Error);
+        // Don't show error if request was aborted (user is still typing)
+        if (e.name === "AbortError") {
+          return;
+        }
+        // Check if this is still the current request before showing error
+        if (currentController.signal.aborted) {
+          return;
+        }
+        resetState(ScreenState.Error);
         console.error(e);
       })
       .then((res) => {
+        // Check if this request was cancelled
+        if (currentController.signal.aborted) {
+          return;
+        }
+
         if (!res) {
-          onReset();
-          setScreenState(ScreenState.Error);
+          resetState(ScreenState.Error);
           return;
         }
 
         if (res.hits.length === 0) {
-          onReset();
-          setScreenState(ScreenState.NoResults);
+          resetState(ScreenState.NoResults);
           return;
         }
 
