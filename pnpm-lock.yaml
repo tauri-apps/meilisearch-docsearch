@@ -26,10 +26,10 @@ importers:
         version: 3.5.3
       tsup:
         specifier: 8.4.0
-        version: 8.4.0(postcss@8.5.3)(typescript@5.8.3)
+        version: 8.4.0(postcss@8.5.3)(typescript@5.9.3)
       typescript:
-        specifier: 5.8.3
-        version: 5.8.3
+        specifier: 5.9.3
+        version: 5.9.3
 
   example:
     dependencies:
@@ -38,8 +38,8 @@ importers:
         version: link:..
     devDependencies:
       typescript:
-        specifier: 5.8.3
-        version: 5.8.3
+        specifier: 5.9.3
+        version: 5.9.3
       vite:
         specifier: 6.3.4
         version: 6.3.4
@@ -603,6 +603,7 @@ packages:
 
   glob@10.4.5:
     resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   globals@11.12.0:
@@ -793,6 +794,7 @@ packages:
   source-map@0.8.0-beta.0:
     resolution: {integrity: sha512-2ymg6oRBpebeZi9UUNsgQ89bhx01TcTkmNTGnNO88imTmbSgy4nfujrgVEFKWpMTEGA11EDkTt7mqObTPdigIA==}
     engines: {node: '>= 8'}
+    deprecated: The work that was done in this beta branch won't be included in future versions
 
   string-width@4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
@@ -862,8 +864,8 @@ packages:
       typescript:
         optional: true
 
-  typescript@5.8.3:
-    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
+  typescript@5.9.3:
+    resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -1658,7 +1660,7 @@ snapshots:
 
   ts-interface-checker@0.1.13: {}
 
-  tsup@8.4.0(postcss@8.5.3)(typescript@5.8.3):
+  tsup@8.4.0(postcss@8.5.3)(typescript@5.9.3):
     dependencies:
       bundle-require: 5.1.0(esbuild@0.25.3)
       cac: 6.7.14
@@ -1678,14 +1680,14 @@ snapshots:
       tree-kill: 1.2.2
     optionalDependencies:
       postcss: 8.5.3
-      typescript: 5.8.3
+      typescript: 5.9.3
     transitivePeerDependencies:
       - jiti
       - supports-color
       - tsx
       - yaml
 
-  typescript@5.8.3: {}
+  typescript@5.9.3: {}
 
   update-browserslist-db@1.1.3(browserslist@4.24.4):
     dependencies:
