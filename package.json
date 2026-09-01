@@ -54,5 +54,5 @@
     "quicksearch",
     "quicksearchbar"
   ],
-  "packageManager": "pnpm@10.10.0"
+  "packageManager": "pnpm@11.25.0"
 }
