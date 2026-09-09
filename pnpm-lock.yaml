@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       meilisearch:
-        specifier: 0.50.0
-        version: 0.50.0
+        specifier: 0.62.0
+        version: 0.62.0
       solid-js:
         specifier: 1.9.6
         version: 1.9.6
@@ -603,6 +603,7 @@ packages:
 
   glob@10.4.5:
     resolution: {integrity: sha512-7Bv8RF0k6xjo7d4A/PxYLbUCfb6c+Vpd2/mB2yRDlew7Jb5hEXiCD9ibfO7wpk8i4sevK6DFny9h7EYbM3/sHg==}
+    deprecated: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
     hasBin: true
 
   globals@11.12.0:
@@ -659,8 +660,9 @@ packages:
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
 
-  meilisearch@0.50.0:
-    resolution: {integrity: sha512-9IzIkobvnuS18Eg4dq/eJB9W+eXqeLZjNRgq/kKMswSmVYYSQsXqGgSuCA0JkF+o5RwJlwIsieQee6rh313VhA==}
+  meilisearch@0.62.0:
+    resolution: {integrity: sha512-/ETDW7mmWI2NcSmtJdTPhbjsIbs3VcuapszX5X6JhdHB0XbszPOhqd3EB2bEylL0HK7dgwh/4Z3MdyuycWVf5A==}
+    engines: {node: ^20.19.0 || >=22.12.0}
 
   minimatch@9.0.5:
     resolution: {integrity: sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow==}
@@ -793,6 +795,7 @@ packages:
   source-map@0.8.0-beta.0:
     resolution: {integrity: sha512-2ymg6oRBpebeZi9UUNsgQ89bhx01TcTkmNTGnNO88imTmbSgy4nfujrgVEFKWpMTEGA11EDkTt7mqObTPdigIA==}
     engines: {node: '>= 8'}
+    deprecated: The work that was done in this beta branch won't be included in future versions
 
   string-width@4.2.3:
     resolution: {integrity: sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==}
@@ -1485,7 +1488,7 @@ snapshots:
     dependencies:
       yallist: 3.1.1
 
-  meilisearch@0.50.0: {}
+  meilisearch@0.62.0: {}
 
   minimatch@9.0.5:
     dependencies:
