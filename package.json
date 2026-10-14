@@ -42,7 +42,7 @@
     "esbuild": "0.25.3",
     "esbuild-plugin-solid": "0.6.0",
     "prettier": "3.5.3",
-    "tsup": "8.4.0",
+    "tsup": "9.0.0",
     "typescript": "5.8.3"
   },
   "keywords": [
